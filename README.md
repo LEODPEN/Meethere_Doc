@@ -33,7 +33,7 @@
 
 <div align=center><img width="44%" height="44%" src="极部分截图/2.png"/></div>
 
-<div align=center><img width="44%" height="44%" src="极部分截图/1.jpg"/></div>
+<div align=center><img width="44%" height="44%" src="极部分截图/3.jpg"/></div>
 
 > 更多展示内容见前端仓库
 
