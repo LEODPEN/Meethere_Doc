@@ -25,21 +25,23 @@
 
 + Meethere性能测试计划.docx
 
-+ Meethere系统性能报告.doc
++ Meethere系统性能报告.docx s
 
 + coverage ( 覆盖度报告 )
 
 + static analyze ( 静态分析报告 )
 
++ 性能测试脚本与report
+
 ## 项目部分成品截图
 
-<div align=center><img width="44%" height="44%" src="极部分截图/1.jpg"/></div>
+<div align=center><img width="66%" height="66%" src="极部分截图/1.jpg"/></div>
 
-<div align=center><img width="44%" height="44%" src="极部分截图/2.png"/></div>
+<div align=center><img width="66%" height="66%" src="极部分截图/2.png"/></div>
 
-<div align=center><img width="44%" height="44%" src="极部分截图/3.png"/></div>
+<div align=center><img width="66%" height="66%" src="极部分截图/3.png"/></div>
 
-> 更多展示内容见前端仓库
+> 更多内容截图见前端仓库；此外可见三分钟视频或直接尝试
 
 ## 其他
 

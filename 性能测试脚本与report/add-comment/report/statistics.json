@@ -1,0 +1,62 @@
+{
+  "Get News And Comments" : {
+    "transaction" : "Get News And Comments",
+    "sampleCount" : 2535,
+    "errorCount" : 159,
+    "errorPct" : 6.272189,
+    "meanResTime" : 29859.68560157791,
+    "minResTime" : 27.0,
+    "maxResTime" : 57566.0,
+    "pct1ResTime" : 48528.20000000001,
+    "pct2ResTime" : 50406.2,
+    "pct3ResTime" : 53146.919999999984,
+    "throughput" : 6.0449400155952295,
+    "receivedKBytesPerSec" : 3.812626830472221,
+    "sentKBytesPerSec" : 2.7717874743060245
+  },
+  "List News" : {
+    "transaction" : "List News",
+    "sampleCount" : 1228,
+    "errorCount" : 83,
+    "errorPct" : 6.758958,
+    "meanResTime" : 30899.99755700325,
+    "minResTime" : 28.0,
+    "maxResTime" : 57819.0,
+    "pct1ResTime" : 49614.600000000006,
+    "pct2ResTime" : 51616.4,
+    "pct3ResTime" : 54611.22,
+    "throughput" : 2.9243526178671275,
+    "receivedKBytesPerSec" : 5.157386836870895,
+    "sentKBytesPerSec" : 1.0152717908028157
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 5004,
+    "errorCount" : 242,
+    "errorPct" : 4.836131,
+    "meanResTime" : 30396.131095123972,
+    "minResTime" : 27.0,
+    "maxResTime" : 64673.0,
+    "pct1ResTime" : 50018.5,
+    "pct2ResTime" : 52150.75,
+    "pct3ResTime" : 57481.14999999999,
+    "throughput" : 11.870956722249504,
+    "receivedKBytesPerSec" : 10.928201721454785,
+    "sentKBytesPerSec" : 4.4675128674682645
+  },
+  "Login" : {
+    "transaction" : "Login",
+    "sampleCount" : 1241,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 30993.344077356982,
+    "minResTime" : 3347.0,
+    "maxResTime" : 64673.0,
+    "pct1ResTime" : 53833.0,
+    "pct2ResTime" : 56485.59999999997,
+    "pct3ResTime" : 60891.09999999998,
+    "throughput" : 2.944023229553154,
+    "receivedKBytesPerSec" : 1.997566224954452,
+    "sentKBytesPerSec" : 0.6986305124818519
+  }
+}

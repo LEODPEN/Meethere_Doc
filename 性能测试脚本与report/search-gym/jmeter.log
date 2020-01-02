@@ -1,0 +1,764 @@
+2020-01-03 00:01:11,013 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-01-03 00:01:11,030 INFO o.a.j.JMeter: Loading user properties from: C:\Users\34684\apache-jmeter-5.2.1\apache-jmeter-5.2.1\bin\user.properties
+2020-01-03 00:01:11,031 INFO o.a.j.JMeter: Loading system properties from: C:\Users\34684\apache-jmeter-5.2.1\apache-jmeter-5.2.1\bin\system.properties
+2020-01-03 00:01:11,033 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-01-03 00:01:11,033 INFO o.a.j.JMeter: Version 5.2.1
+2020-01-03 00:01:11,033 INFO o.a.j.JMeter: java.version=1.8.0_221
+2020-01-03 00:01:11,033 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-01-03 00:01:11,033 INFO o.a.j.JMeter: os.name=Windows 10
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: os.arch=amd64
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: os.version=10.0
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: file.encoding=GBK
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: java.awt.headless=true
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-01-03 00:01:11,042 INFO o.a.j.JMeter: Available Processors =4
+2020-01-03 00:01:11,048 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-01-03 00:01:11,048 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-01-03 00:01:11,048 INFO o.a.j.JMeter: JMeterHome=C:\Users\34684\apache-jmeter-5.2.1\apache-jmeter-5.2.1
+2020-01-03 00:01:11,048 INFO o.a.j.JMeter: user.dir  =C:\Users\34684\Desktop\meethere-jmeter-test\search-gym
+2020-01-03 00:01:11,049 INFO o.a.j.JMeter: PWD       =C:\Users\34684\Desktop\meethere-jmeter-test\search-gym
+2020-01-03 00:01:15,577 INFO o.a.j.JMeter: IP: 10.0.75.1 Name: DESKTOP-3UEGUL8 FullName: DESKTOP-3UEGUL8
+2020-01-03 00:01:15,592 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report'
+2020-01-03 00:01:15,603 INFO o.a.j.s.FileServer: Default base='C:\Users\34684\Desktop\meethere-jmeter-test\search-gym'
+2020-01-03 00:01:15,610 INFO o.a.j.s.FileServer: Set new base='C:\Users\34684\Desktop\meethere-jmeter-test\search-gym'
+2020-01-03 00:01:15,833 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-01-03 00:01:15,844 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-01-03 00:01:15,844 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-01-03 00:01:15,860 INFO o.a.j.s.SaveService: Loading file: test.jmx
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-01-03 00:01:15,938 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-01-03 00:01:16,070 INFO o.a.j.JMeter: Creating summariser <summary>
+2020-01-03 00:01:16,070 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2020-01-03 00:01:16,070 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: test.jtl
+2020-01-03 00:01:16,085 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\34684\apache-jmeter-5.2.1\apache-jmeter-5.2.1\bin\reportgenerator.properties
+2020-01-03 00:01:16,086 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2020-01-03 00:01:16,086 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,102 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2020-01-03 00:01:16,118 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2020-01-03 00:01:16,133 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-01-03 00:01:16,133 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-01-03 00:01:16,133 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-01-03 00:01:16,149 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-01-03 00:01:16,149 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-01-03 00:01:16,720 INFO o.a.j.JMeter: Running test (1577980876720)
+2020-01-03 00:01:16,780 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : µÇÂ¼
+2020-01-03 00:01:16,780 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group µÇÂ¼.
+2020-01-03 00:01:16,780 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-01-03 00:01:16,780 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2020-01-03 00:01:16,796 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2020-01-03 00:01:16,796 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : ËÑË÷³¡¹Ý
+2020-01-03 00:01:16,796 INFO o.a.j.e.StandardJMeterEngine: Starting 200 threads for group ËÑË÷³¡¹Ý.
+2020-01-03 00:01:16,796 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-01-03 00:01:16,796 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 2 threads 200
+2020-01-03 00:01:16,811 INFO o.a.j.t.JMeterThread: Thread started: µÇÂ¼ 1-1
+2020-01-03 00:01:16,920 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-3UEGUL8
+2020-01-03 00:01:16,964 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2020-01-03 00:01:16,967 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-01-03 00:01:16,967 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-01-03 00:01:16,967 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-01-03 00:01:16,967 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-01-03 00:01:17,004 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 2
+2020-01-03 00:01:17,004 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-01-03 00:01:17,543 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2020-01-03 00:01:17,544 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2020-01-03 00:01:17,803 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-20
+2020-01-03 00:01:17,834 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: µÇÂ¼ 1-1
+2020-01-03 00:01:17,834 INFO o.a.j.t.JMeterThread: Thread finished: µÇÂ¼ 1-1
+2020-01-03 00:01:18,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-19
+2020-01-03 00:01:19,808 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-18
+2020-01-03 00:01:20,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-17
+2020-01-03 00:01:21,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-16
+2020-01-03 00:01:22,799 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-15
+2020-01-03 00:01:23,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-14
+2020-01-03 00:01:24,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-13
+2020-01-03 00:01:25,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-12
+2020-01-03 00:01:26,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-11
+2020-01-03 00:01:27,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-10
+2020-01-03 00:01:28,806 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-9
+2020-01-03 00:01:29,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-8
+2020-01-03 00:01:30,075 INFO o.a.j.r.Summariser: summary +    153 in 00:00:13 =   11.5/s Avg:   501 Min:   131 Max:   971 Err:     0 (0.00%) Active: 13 Started: 14 Finished: 1
+2020-01-03 00:01:30,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-7
+2020-01-03 00:01:31,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-6
+2020-01-03 00:01:32,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-5
+2020-01-03 00:01:33,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-4
+2020-01-03 00:01:34,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-3
+2020-01-03 00:01:35,798 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-2
+2020-01-03 00:01:36,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-1
+2020-01-03 00:02:00,028 INFO o.a.j.r.Summariser: summary +    412 in 00:00:30 =   13.8/s Avg:  1368 Min:   781 Max:  2625 Err:     0 (0.00%) Active: 20 Started: 21 Finished: 1
+2020-01-03 00:02:00,028 INFO o.a.j.r.Summariser: summary =    565 in 00:00:43 =   13.0/s Avg:  1133 Min:   131 Max:  2625 Err:     0 (0.00%)
+2020-01-03 00:02:17,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-50
+2020-01-03 00:02:18,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-49
+2020-01-03 00:02:19,805 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-48
+2020-01-03 00:02:20,802 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-47
+2020-01-03 00:02:21,875 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-46
+2020-01-03 00:02:22,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-45
+2020-01-03 00:02:23,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-44
+2020-01-03 00:02:24,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-43
+2020-01-03 00:02:25,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-42
+2020-01-03 00:02:26,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-41
+2020-01-03 00:02:27,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-40
+2020-01-03 00:02:28,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-39
+2020-01-03 00:02:29,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-38
+2020-01-03 00:02:30,527 INFO o.a.j.r.Summariser: summary +    374 in 00:00:30 =   12.3/s Avg:  1737 Min:  1028 Max:  3378 Err:     0 (0.00%) Active: 33 Started: 34 Finished: 1
+2020-01-03 00:02:30,529 INFO o.a.j.r.Summariser: summary =    939 in 00:01:14 =   12.7/s Avg:  1374 Min:   131 Max:  3378 Err:     0 (0.00%)
+2020-01-03 00:02:30,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-37
+2020-01-03 00:02:31,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-36
+2020-01-03 00:02:32,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-35
+2020-01-03 00:02:33,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-34
+2020-01-03 00:02:34,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-33
+2020-01-03 00:02:35,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-32
+2020-01-03 00:02:36,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-31
+2020-01-03 00:02:37,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-30
+2020-01-03 00:02:38,866 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-29
+2020-01-03 00:02:39,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-28
+2020-01-03 00:02:40,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-27
+2020-01-03 00:02:41,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-26
+2020-01-03 00:02:42,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-25
+2020-01-03 00:02:43,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-24
+2020-01-03 00:02:44,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-23
+2020-01-03 00:02:45,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-22
+2020-01-03 00:02:46,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-21
+2020-01-03 00:03:00,381 INFO o.a.j.r.Summariser: summary +    251 in 00:00:30 =    8.4/s Avg:  4508 Min:  1678 Max:  8826 Err:     0 (0.00%) Active: 50 Started: 51 Finished: 1
+2020-01-03 00:03:00,382 INFO o.a.j.r.Summariser: summary =   1190 in 00:01:44 =   11.5/s Avg:  2035 Min:   131 Max:  8826 Err:     0 (0.00%)
+2020-01-03 00:03:30,459 INFO o.a.j.r.Summariser: summary +    134 in 00:00:30 =    4.5/s Avg: 10810 Min:  8009 Max: 27260 Err:     0 (0.00%) Active: 50 Started: 51 Finished: 1
+2020-01-03 00:03:30,460 INFO o.a.j.r.Summariser: summary =   1324 in 00:02:14 =    9.9/s Avg:  2923 Min:   131 Max: 27260 Err:     0 (0.00%)
+2020-01-03 00:04:00,552 INFO o.a.j.r.Summariser: summary +    118 in 00:00:30 =    3.9/s Avg: 12129 Min:  8451 Max: 22681 Err:     0 (0.00%) Active: 50 Started: 51 Finished: 1
+2020-01-03 00:04:00,553 INFO o.a.j.r.Summariser: summary =   1442 in 00:02:44 =    8.8/s Avg:  3676 Min:   131 Max: 27260 Err:     0 (0.00%)
+2020-01-03 00:04:17,318 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-100
+2020-01-03 00:04:17,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-99
+2020-01-03 00:04:18,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-98
+2020-01-03 00:04:18,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-97
+2020-01-03 00:04:19,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-96
+2020-01-03 00:04:19,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-95
+2020-01-03 00:04:20,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-94
+2020-01-03 00:04:20,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-93
+2020-01-03 00:04:21,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-92
+2020-01-03 00:04:21,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-91
+2020-01-03 00:04:22,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-90
+2020-01-03 00:04:22,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-89
+2020-01-03 00:04:23,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-88
+2020-01-03 00:04:23,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-87
+2020-01-03 00:04:24,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-86
+2020-01-03 00:04:24,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-85
+2020-01-03 00:04:25,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-84
+2020-01-03 00:04:25,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-83
+2020-01-03 00:04:26,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-82
+2020-01-03 00:04:26,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-81
+2020-01-03 00:04:27,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-80
+2020-01-03 00:04:27,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-79
+2020-01-03 00:04:28,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-78
+2020-01-03 00:04:28,808 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-77
+2020-01-03 00:04:29,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-76
+2020-01-03 00:04:29,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-75
+2020-01-03 00:04:30,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-74
+2020-01-03 00:04:30,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-73
+2020-01-03 00:04:31,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-72
+2020-01-03 00:04:31,415 INFO o.a.j.r.Summariser: summary +     86 in 00:00:31 =    2.8/s Avg: 16672 Min: 12935 Max: 25842 Err:     0 (0.00%) Active: 79 Started: 80 Finished: 1
+2020-01-03 00:04:31,416 INFO o.a.j.r.Summariser: summary =   1528 in 00:03:15 =    7.8/s Avg:  4408 Min:   131 Max: 27260 Err:     0 (0.00%)
+2020-01-03 00:04:31,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-71
+2020-01-03 00:04:32,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-70
+2020-01-03 00:04:32,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-69
+2020-01-03 00:04:33,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-68
+2020-01-03 00:04:33,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-67
+2020-01-03 00:04:34,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-66
+2020-01-03 00:04:34,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-65
+2020-01-03 00:04:35,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-64
+2020-01-03 00:04:35,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-63
+2020-01-03 00:04:36,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-62
+2020-01-03 00:04:36,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-61
+2020-01-03 00:04:37,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-60
+2020-01-03 00:04:37,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-59
+2020-01-03 00:04:38,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-58
+2020-01-03 00:04:38,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-57
+2020-01-03 00:04:39,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-56
+2020-01-03 00:04:39,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-55
+2020-01-03 00:04:40,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-54
+2020-01-03 00:04:40,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-53
+2020-01-03 00:04:41,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-52
+2020-01-03 00:04:41,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-51
+2020-01-03 00:05:01,517 INFO o.a.j.r.Summariser: summary +    122 in 00:00:30 =    4.1/s Avg: 19915 Min: 17009 Max: 31248 Err:     0 (0.00%) Active: 100 Started: 101 Finished: 1
+2020-01-03 00:05:01,519 INFO o.a.j.r.Summariser: summary =   1650 in 00:03:45 =    7.3/s Avg:  5554 Min:   131 Max: 31248 Err:     0 (0.00%)
+2020-01-03 00:05:30,637 INFO o.a.j.r.Summariser: summary +    123 in 00:00:29 =    4.2/s Avg: 23011 Min: 19828 Max: 35043 Err:     0 (0.00%) Active: 100 Started: 101 Finished: 1
+2020-01-03 00:05:30,642 INFO o.a.j.r.Summariser: summary =   1773 in 00:04:14 =    7.0/s Avg:  6765 Min:   131 Max: 35043 Err:     0 (0.00%)
+2020-01-03 00:06:00,082 INFO o.a.j.r.Summariser: summary +    112 in 00:00:29 =    3.8/s Avg: 24782 Min: 21355 Max: 32392 Err:     0 (0.00%) Active: 100 Started: 101 Finished: 1
+2020-01-03 00:06:00,086 INFO o.a.j.r.Summariser: summary =   1885 in 00:04:43 =    6.7/s Avg:  7836 Min:   131 Max: 35043 Err:     0 (0.00%)
+2020-01-03 00:06:17,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-200
+2020-01-03 00:06:17,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-199
+2020-01-03 00:06:17,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-198
+2020-01-03 00:06:17,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-197
+2020-01-03 00:06:18,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-196
+2020-01-03 00:06:18,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-195
+2020-01-03 00:06:18,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-194
+2020-01-03 00:06:18,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-193
+2020-01-03 00:06:19,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-192
+2020-01-03 00:06:19,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-191
+2020-01-03 00:06:19,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-190
+2020-01-03 00:06:19,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-189
+2020-01-03 00:06:20,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-188
+2020-01-03 00:06:20,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-187
+2020-01-03 00:06:20,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-186
+2020-01-03 00:06:20,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-185
+2020-01-03 00:06:21,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-184
+2020-01-03 00:06:21,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-183
+2020-01-03 00:06:21,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-182
+2020-01-03 00:06:21,802 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-181
+2020-01-03 00:06:22,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-180
+2020-01-03 00:06:22,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-179
+2020-01-03 00:06:22,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-178
+2020-01-03 00:06:22,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-177
+2020-01-03 00:06:23,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-176
+2020-01-03 00:06:23,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-175
+2020-01-03 00:06:23,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-174
+2020-01-03 00:06:23,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-173
+2020-01-03 00:06:24,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-172
+2020-01-03 00:06:24,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-171
+2020-01-03 00:06:24,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-170
+2020-01-03 00:06:24,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-169
+2020-01-03 00:06:25,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-168
+2020-01-03 00:06:25,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-167
+2020-01-03 00:06:25,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-166
+2020-01-03 00:06:25,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-165
+2020-01-03 00:06:26,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-164
+2020-01-03 00:06:26,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-163
+2020-01-03 00:06:26,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-162
+2020-01-03 00:06:26,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-161
+2020-01-03 00:06:27,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-160
+2020-01-03 00:06:27,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-159
+2020-01-03 00:06:27,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-158
+2020-01-03 00:06:27,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-157
+2020-01-03 00:06:28,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-156
+2020-01-03 00:06:28,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-155
+2020-01-03 00:06:28,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-154
+2020-01-03 00:06:28,798 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-153
+2020-01-03 00:06:29,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-152
+2020-01-03 00:06:29,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-151
+2020-01-03 00:06:29,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-150
+2020-01-03 00:06:29,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-149
+2020-01-03 00:06:30,049 INFO o.a.j.r.Summariser: summary +    105 in 00:00:30 =    3.5/s Avg: 26653 Min: 23765 Max: 39452 Err:     0 (0.00%) Active: 152 Started: 153 Finished: 1
+2020-01-03 00:06:30,051 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-148
+2020-01-03 00:06:30,055 INFO o.a.j.r.Summariser: summary =   1990 in 00:05:13 =    6.4/s Avg:  8829 Min:   131 Max: 39452 Err:     0 (0.00%)
+2020-01-03 00:06:30,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-147
+2020-01-03 00:06:30,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-146
+2020-01-03 00:06:30,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-145
+2020-01-03 00:06:31,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-144
+2020-01-03 00:06:31,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-143
+2020-01-03 00:06:31,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-142
+2020-01-03 00:06:31,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-141
+2020-01-03 00:06:32,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-140
+2020-01-03 00:06:32,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-139
+2020-01-03 00:06:32,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-138
+2020-01-03 00:06:32,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-137
+2020-01-03 00:06:33,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-136
+2020-01-03 00:06:33,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-135
+2020-01-03 00:06:33,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-134
+2020-01-03 00:06:33,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-133
+2020-01-03 00:06:34,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-132
+2020-01-03 00:06:34,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-131
+2020-01-03 00:06:34,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-130
+2020-01-03 00:06:34,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-129
+2020-01-03 00:06:35,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-128
+2020-01-03 00:06:35,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-127
+2020-01-03 00:06:35,547 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-126
+2020-01-03 00:06:35,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-125
+2020-01-03 00:06:36,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-124
+2020-01-03 00:06:36,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-123
+2020-01-03 00:06:36,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-122
+2020-01-03 00:06:36,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-121
+2020-01-03 00:06:37,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-120
+2020-01-03 00:06:37,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-119
+2020-01-03 00:06:37,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-118
+2020-01-03 00:06:37,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-117
+2020-01-03 00:06:38,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-116
+2020-01-03 00:06:38,296 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-115
+2020-01-03 00:06:38,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-114
+2020-01-03 00:06:38,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-113
+2020-01-03 00:06:39,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-112
+2020-01-03 00:06:39,301 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-111
+2020-01-03 00:06:39,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-110
+2020-01-03 00:06:39,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-109
+2020-01-03 00:06:40,046 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-108
+2020-01-03 00:06:40,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-107
+2020-01-03 00:06:40,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-106
+2020-01-03 00:06:40,797 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-105
+2020-01-03 00:06:41,047 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-104
+2020-01-03 00:06:41,297 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-103
+2020-01-03 00:06:41,546 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-102
+2020-01-03 00:06:41,796 INFO o.a.j.t.JMeterThread: Thread started: ËÑË÷³¡¹Ý 2-101
+2020-01-03 00:07:00,727 INFO o.a.j.r.Summariser: summary +    142 in 00:00:31 =    4.6/s Avg: 29840 Min: 27082 Max: 41677 Err:     0 (0.00%) Active: 200 Started: 201 Finished: 1
+2020-01-03 00:07:00,750 INFO o.a.j.r.Summariser: summary =   2132 in 00:05:44 =    6.2/s Avg: 10228 Min:   131 Max: 41677 Err:     0 (0.00%)
+2020-01-03 00:07:30,260 INFO o.a.j.r.Summariser: summary +    169 in 00:00:30 =    5.7/s Avg: 34787 Min: 29218 Max: 53223 Err:     0 (0.00%) Active: 200 Started: 201 Finished: 1
+2020-01-03 00:07:30,292 INFO o.a.j.r.Summariser: summary =   2301 in 00:06:14 =    6.2/s Avg: 12032 Min:   131 Max: 53223 Err:     0 (0.00%)
+2020-01-03 00:07:41,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-146
+2020-01-03 00:07:41,848 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-146
+2020-01-03 00:07:41,848 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-134
+2020-01-03 00:07:41,848 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-134
+2020-01-03 00:07:41,865 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-147
+2020-01-03 00:07:41,865 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-88
+2020-01-03 00:07:41,865 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-147
+2020-01-03 00:07:41,865 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-88
+2020-01-03 00:07:41,868 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-2
+2020-01-03 00:07:41,871 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-2
+2020-01-03 00:07:41,914 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-97
+2020-01-03 00:07:41,914 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-97
+2020-01-03 00:07:41,932 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-133
+2020-01-03 00:07:41,932 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-133
+2020-01-03 00:07:42,977 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-129
+2020-01-03 00:07:42,977 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-129
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-130
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-9
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-126
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-126
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-130
+2020-01-03 00:07:42,983 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-9
+2020-01-03 00:07:43,060 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-70
+2020-01-03 00:07:43,061 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-70
+2020-01-03 00:07:43,065 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-127
+2020-01-03 00:07:43,066 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-127
+2020-01-03 00:07:43,174 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-132
+2020-01-03 00:07:43,175 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-132
+2020-01-03 00:07:43,206 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-128
+2020-01-03 00:07:43,206 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-128
+2020-01-03 00:07:43,398 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-10
+2020-01-03 00:07:43,398 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-10
+2020-01-03 00:07:44,466 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-124
+2020-01-03 00:07:44,466 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-45
+2020-01-03 00:07:44,466 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-124
+2020-01-03 00:07:44,466 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-45
+2020-01-03 00:07:44,564 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-119
+2020-01-03 00:07:44,564 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-119
+2020-01-03 00:07:44,575 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-121
+2020-01-03 00:07:44,575 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-121
+2020-01-03 00:07:44,580 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-125
+2020-01-03 00:07:44,580 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-125
+2020-01-03 00:07:44,673 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-120
+2020-01-03 00:07:44,673 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-120
+2020-01-03 00:07:44,942 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-118
+2020-01-03 00:07:44,943 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-118
+2020-01-03 00:07:45,478 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-49
+2020-01-03 00:07:45,478 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-49
+2020-01-03 00:07:45,513 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-95
+2020-01-03 00:07:45,514 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-95
+2020-01-03 00:07:45,517 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-122
+2020-01-03 00:07:45,518 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-122
+2020-01-03 00:07:45,534 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-7
+2020-01-03 00:07:45,535 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-7
+2020-01-03 00:07:45,538 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-135
+2020-01-03 00:07:45,538 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-135
+2020-01-03 00:07:45,538 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-27
+2020-01-03 00:07:45,539 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-27
+2020-01-03 00:07:45,589 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-39
+2020-01-03 00:07:45,589 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-39
+2020-01-03 00:07:45,591 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-117
+2020-01-03 00:07:45,592 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-117
+2020-01-03 00:07:45,613 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-11
+2020-01-03 00:07:45,613 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-11
+2020-01-03 00:07:46,648 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-68
+2020-01-03 00:07:46,649 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-68
+2020-01-03 00:07:46,652 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-72
+2020-01-03 00:07:46,652 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-72
+2020-01-03 00:07:46,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-116
+2020-01-03 00:07:46,653 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-116
+2020-01-03 00:07:46,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-40
+2020-01-03 00:07:46,653 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-40
+2020-01-03 00:07:46,722 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-131
+2020-01-03 00:07:46,722 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-131
+2020-01-03 00:07:46,723 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-25
+2020-01-03 00:07:46,724 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-25
+2020-01-03 00:07:46,815 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-65
+2020-01-03 00:07:46,815 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-65
+2020-01-03 00:07:47,721 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-47
+2020-01-03 00:07:47,721 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-38
+2020-01-03 00:07:47,722 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-47
+2020-01-03 00:07:47,722 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-38
+2020-01-03 00:07:47,762 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-58
+2020-01-03 00:07:47,762 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-58
+2020-01-03 00:07:47,843 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-115
+2020-01-03 00:07:47,843 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-115
+2020-01-03 00:07:48,367 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-50
+2020-01-03 00:07:48,367 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-50
+2020-01-03 00:07:48,807 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-113
+2020-01-03 00:07:48,807 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-113
+2020-01-03 00:07:48,809 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-123
+2020-01-03 00:07:48,809 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-19
+2020-01-03 00:07:48,810 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-123
+2020-01-03 00:07:48,810 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-19
+2020-01-03 00:07:48,926 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-63
+2020-01-03 00:07:48,926 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-63
+2020-01-03 00:07:48,950 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-111
+2020-01-03 00:07:48,950 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-111
+2020-01-03 00:07:48,969 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-114
+2020-01-03 00:07:48,970 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-114
+2020-01-03 00:07:49,921 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-73
+2020-01-03 00:07:49,921 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-73
+2020-01-03 00:07:49,922 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-41
+2020-01-03 00:07:49,923 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-41
+2020-01-03 00:07:50,048 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-103
+2020-01-03 00:07:50,048 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-103
+2020-01-03 00:07:50,054 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-53
+2020-01-03 00:07:50,055 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-53
+2020-01-03 00:07:50,078 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-107
+2020-01-03 00:07:50,079 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-107
+2020-01-03 00:07:50,271 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-106
+2020-01-03 00:07:50,272 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-106
+2020-01-03 00:07:50,274 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-101
+2020-01-03 00:07:50,274 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-101
+2020-01-03 00:07:50,275 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-105
+2020-01-03 00:07:50,275 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-105
+2020-01-03 00:07:51,529 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-26
+2020-01-03 00:07:51,529 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-26
+2020-01-03 00:07:51,530 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-6
+2020-01-03 00:07:51,530 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-6
+2020-01-03 00:07:51,532 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-104
+2020-01-03 00:07:51,532 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-104
+2020-01-03 00:07:51,532 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-48
+2020-01-03 00:07:51,533 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-48
+2020-01-03 00:07:51,534 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-102
+2020-01-03 00:07:51,534 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-18
+2020-01-03 00:07:51,535 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-102
+2020-01-03 00:07:51,535 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-18
+2020-01-03 00:07:51,565 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-52
+2020-01-03 00:07:51,565 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-52
+2020-01-03 00:07:52,514 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-112
+2020-01-03 00:07:52,514 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-61
+2020-01-03 00:07:52,514 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-112
+2020-01-03 00:07:52,514 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-61
+2020-01-03 00:07:52,515 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-66
+2020-01-03 00:07:52,516 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-66
+2020-01-03 00:07:52,517 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-59
+2020-01-03 00:07:52,517 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-59
+2020-01-03 00:07:52,541 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-37
+2020-01-03 00:07:52,542 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-37
+2020-01-03 00:07:55,398 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-8
+2020-01-03 00:07:55,398 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-8
+2020-01-03 00:07:55,399 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-77
+2020-01-03 00:07:55,399 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-77
+2020-01-03 00:07:55,460 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-92
+2020-01-03 00:07:55,460 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-92
+2020-01-03 00:07:55,482 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-110
+2020-01-03 00:07:55,483 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-110
+2020-01-03 00:07:55,512 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-4
+2020-01-03 00:07:55,512 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-4
+2020-01-03 00:07:55,610 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-29
+2020-01-03 00:07:55,610 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-29
+2020-01-03 00:07:56,737 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-22
+2020-01-03 00:07:56,737 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-22
+2020-01-03 00:07:56,814 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-55
+2020-01-03 00:07:56,814 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-55
+2020-01-03 00:07:57,078 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-93
+2020-01-03 00:07:57,079 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-93
+2020-01-03 00:07:57,135 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-109
+2020-01-03 00:07:57,136 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-109
+2020-01-03 00:07:57,228 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-198
+2020-01-03 00:07:57,228 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-198
+2020-01-03 00:07:57,557 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-199
+2020-01-03 00:07:57,557 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-199
+2020-01-03 00:07:57,557 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-75
+2020-01-03 00:07:57,558 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-75
+2020-01-03 00:07:57,559 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-67
+2020-01-03 00:07:57,559 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-56
+2020-01-03 00:07:57,560 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-67
+2020-01-03 00:07:57,560 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-56
+2020-01-03 00:07:57,636 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-60
+2020-01-03 00:07:57,636 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-60
+2020-01-03 00:07:59,111 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-44
+2020-01-03 00:07:59,112 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-44
+2020-01-03 00:07:59,113 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-42
+2020-01-03 00:07:59,113 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-42
+2020-01-03 00:07:59,131 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-191
+2020-01-03 00:07:59,131 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-191
+2020-01-03 00:07:59,202 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-46
+2020-01-03 00:07:59,203 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-46
+2020-01-03 00:07:59,207 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-51
+2020-01-03 00:07:59,208 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-51
+2020-01-03 00:07:59,689 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-108
+2020-01-03 00:07:59,689 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-108
+2020-01-03 00:07:59,689 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-192
+2020-01-03 00:07:59,690 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-192
+2020-01-03 00:07:59,693 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-21
+2020-01-03 00:07:59,693 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-21
+2020-01-03 00:08:00,575 INFO o.a.j.r.Summariser: summary +    154 in 00:00:30 =    5.1/s Avg: 36438 Min: 33628 Max: 49519 Err:     0 (0.00%) Active: 106 Started: 201 Finished: 95
+2020-01-03 00:08:00,575 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-189
+2020-01-03 00:08:00,576 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-195
+2020-01-03 00:08:00,576 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-189
+2020-01-03 00:08:00,576 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-195
+2020-01-03 00:08:00,578 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-193
+2020-01-03 00:08:00,579 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-193
+2020-01-03 00:08:00,580 INFO o.a.j.r.Summariser: summary =   2455 in 00:06:44 =    6.1/s Avg: 13563 Min:   131 Max: 53223 Err:     0 (0.00%)
+2020-01-03 00:08:00,584 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-23
+2020-01-03 00:08:00,585 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-23
+2020-01-03 00:08:01,879 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-185
+2020-01-03 00:08:01,879 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-185
+2020-01-03 00:08:01,897 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-190
+2020-01-03 00:08:01,897 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-190
+2020-01-03 00:08:01,943 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-28
+2020-01-03 00:08:01,944 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-28
+2020-01-03 00:08:01,960 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-54
+2020-01-03 00:08:01,960 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-54
+2020-01-03 00:08:01,973 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-187
+2020-01-03 00:08:01,973 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-187
+2020-01-03 00:08:04,280 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-188
+2020-01-03 00:08:04,281 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-188
+2020-01-03 00:08:04,318 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-100
+2020-01-03 00:08:04,318 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-100
+2020-01-03 00:08:04,323 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-34
+2020-01-03 00:08:04,324 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-34
+2020-01-03 00:08:04,343 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-183
+2020-01-03 00:08:04,343 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-183
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-15
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-15
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-196
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-182
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-33
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-17
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-17
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-182
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-184
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-33
+2020-01-03 00:08:06,778 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-196
+2020-01-03 00:08:06,793 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-184
+2020-01-03 00:08:06,809 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-94
+2020-01-03 00:08:06,809 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-94
+2020-01-03 00:08:06,824 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-181
+2020-01-03 00:08:06,824 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-181
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-83
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-83
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-144
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-144
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-179
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-177
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-179
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-177
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-57
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-178
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-57
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-178
+2020-01-03 00:08:07,894 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-180
+2020-01-03 00:08:07,909 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-180
+2020-01-03 00:08:07,909 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-62
+2020-01-03 00:08:07,909 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-62
+2020-01-03 00:08:07,940 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-89
+2020-01-03 00:08:07,940 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-89
+2020-01-03 00:08:09,005 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-194
+2020-01-03 00:08:09,005 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-194
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-79
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-79
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-171
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-171
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-76
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-76
+2020-01-03 00:08:09,099 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-82
+2020-01-03 00:08:09,114 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-82
+2020-01-03 00:08:09,132 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-170
+2020-01-03 00:08:09,132 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-170
+2020-01-03 00:08:09,538 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-174
+2020-01-03 00:08:09,538 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-174
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-172
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-172
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-164
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-186
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-186
+2020-01-03 00:08:10,144 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-164
+2020-01-03 00:08:10,160 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-81
+2020-01-03 00:08:10,160 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-81
+2020-01-03 00:08:10,160 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-176
+2020-01-03 00:08:10,160 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-176
+2020-01-03 00:08:10,265 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-197
+2020-01-03 00:08:10,265 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-197
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-13
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-13
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-1
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-1
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-43
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-43
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-163
+2020-01-03 00:08:11,309 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-163
+2020-01-03 00:08:11,340 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-5
+2020-01-03 00:08:11,340 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-5
+2020-01-03 00:08:13,029 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-159
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-159
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-160
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-160
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-98
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-98
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-99
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-158
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-99
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-158
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-175
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-175
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-30
+2020-01-03 00:08:13,045 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-30
+2020-01-03 00:08:15,468 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-169
+2020-01-03 00:08:15,468 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-169
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-87
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-87
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-155
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-155
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-156
+2020-01-03 00:08:15,469 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-156
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-161
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-161
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-36
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-166
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-36
+2020-01-03 00:08:16,494 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-166
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-157
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-157
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-14
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-14
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-20
+2020-01-03 00:08:16,509 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-20
+2020-01-03 00:08:17,657 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-90
+2020-01-03 00:08:17,673 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-90
+2020-01-03 00:08:17,704 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-165
+2020-01-03 00:08:17,704 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-165
+2020-01-03 00:08:18,784 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-200
+2020-01-03 00:08:18,784 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-200
+2020-01-03 00:08:18,784 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-149
+2020-01-03 00:08:18,784 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-149
+2020-01-03 00:08:18,846 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-168
+2020-01-03 00:08:18,846 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-168
+2020-01-03 00:08:18,862 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-91
+2020-01-03 00:08:18,862 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-91
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-86
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-86
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-151
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-151
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-167
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-167
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-3
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-3
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-152
+2020-01-03 00:08:19,581 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-152
+2020-01-03 00:08:20,855 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-74
+2020-01-03 00:08:20,855 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-74
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-32
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-32
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-84
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-84
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-96
+2020-01-03 00:08:20,886 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-96
+2020-01-03 00:08:20,923 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-35
+2020-01-03 00:08:20,923 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-35
+2020-01-03 00:08:20,925 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-154
+2020-01-03 00:08:20,925 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-154
+2020-01-03 00:08:21,564 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-162
+2020-01-03 00:08:21,564 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-145
+2020-01-03 00:08:21,564 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-162
+2020-01-03 00:08:21,564 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-145
+2020-01-03 00:08:24,153 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-85
+2020-01-03 00:08:24,153 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-85
+2020-01-03 00:08:24,153 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-78
+2020-01-03 00:08:24,153 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-78
+2020-01-03 00:08:24,238 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-71
+2020-01-03 00:08:24,239 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-71
+2020-01-03 00:08:24,241 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-31
+2020-01-03 00:08:24,242 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-150
+2020-01-03 00:08:24,242 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-31
+2020-01-03 00:08:24,242 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-150
+2020-01-03 00:08:25,023 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-16
+2020-01-03 00:08:25,023 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-16
+2020-01-03 00:08:25,023 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-143
+2020-01-03 00:08:25,023 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-143
+2020-01-03 00:08:25,054 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-148
+2020-01-03 00:08:25,054 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-148
+2020-01-03 00:08:25,054 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-142
+2020-01-03 00:08:25,054 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-142
+2020-01-03 00:08:25,070 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-12
+2020-01-03 00:08:25,070 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-12
+2020-01-03 00:08:25,117 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-139
+2020-01-03 00:08:25,117 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-139
+2020-01-03 00:08:26,068 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-80
+2020-01-03 00:08:26,068 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-80
+2020-01-03 00:08:26,068 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-64
+2020-01-03 00:08:26,068 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-64
+2020-01-03 00:08:26,083 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-24
+2020-01-03 00:08:26,083 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-24
+2020-01-03 00:08:26,083 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-173
+2020-01-03 00:08:26,083 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-173
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-141
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-141
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-136
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-136
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-138
+2020-01-03 00:08:26,146 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-138
+2020-01-03 00:08:27,229 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-69
+2020-01-03 00:08:27,229 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-69
+2020-01-03 00:08:27,292 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-140
+2020-01-03 00:08:27,292 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-140
+2020-01-03 00:08:27,292 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-137
+2020-01-03 00:08:27,292 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-137
+2020-01-03 00:08:30,669 INFO o.a.j.r.Summariser: summary +    105 in 00:00:30 =    3.5/s Avg: 43098 Min: 37277 Max: 51447 Err:     0 (0.00%) Active: 1 Started: 201 Finished: 200
+2020-01-03 00:08:30,685 INFO o.a.j.r.Summariser: summary =   2560 in 00:07:14 =    5.9/s Avg: 14774 Min:   131 Max: 53223 Err:     0 (0.00%)
+2020-01-03 00:08:30,685 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ËÑË÷³¡¹Ý 2-153
+2020-01-03 00:08:30,685 INFO o.a.j.t.JMeterThread: Thread finished: ËÑË÷³¡¹Ý 2-153
+2020-01-03 00:08:30,685 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-01-03 00:08:30,701 INFO o.a.j.r.Summariser: summary =   2560 in 00:07:14 =    5.9/s Avg: 14774 Min:   131 Max: 53223 Err:     0 (0.00%)
+2020-01-03 00:08:30,702 INFO o.a.j.JMeter: Generating Dashboard
+2020-01-03 00:08:30,702 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2020-01-03 00:08:30,733 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2020-01-03 00:08:31,056 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2020-01-03 00:08:31,056 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2020-01-03 00:08:31,056 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2020-01-03 00:08:31,056 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2020-01-03 00:08:31,056 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2020-01-03 00:08:31,072 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2020-01-03 00:08:31,072 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2020-01-03 00:08:31,072 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2020-01-03 00:08:31,132 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2020-01-03 00:08:31,133 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2020-01-03 00:08:31,133 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2020-01-03 00:08:31,134 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2020-01-03 00:08:31,180 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2020-01-03 00:08:31,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 17920 samples
+2020-01-03 00:08:31,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2020-01-03 00:08:31,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2020-01-03 00:08:31,184 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2020-01-03 00:08:31,184 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 38400 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 7680 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 2560 samples
+2020-01-03 00:08:31,187 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 2560 samples produced in 392ms on channel 0
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary?in context
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2020-01-03 00:08:31,187 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report\statistics.json
+2020-01-03 00:08:31,390 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2020-01-03 00:08:31,390 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report
+2020-01-03 00:08:31,500 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report, creating folder structure
+2020-01-03 00:08:31,515 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\34684\apache-jmeter-5.2.1\apache-jmeter-5.2.1\bin\report-template' to 'C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report', got message: C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report, found non empty folder with following content [C:\Users\34684\Desktop\meethere-jmeter-test\search-gym\report\statistics.json], will be ignored
+2020-01-03 00:08:32,049 INFO o.a.j.JMeter: Dashboard generated

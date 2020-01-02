@@ -1,0 +1,47 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 2560,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 14774.776171875013,
+    "minResTime" : 131.0,
+    "maxResTime" : 53223.0,
+    "pct1ResTime" : 35289.5,
+    "pct2ResTime" : 39261.8,
+    "pct3ResTime" : 45654.67999999997,
+    "throughput" : 5.905489105987382,
+    "receivedKBytesPerSec" : 16.32368615122435,
+    "sentKBytesPerSec" : 2.1387483563824263
+  },
+  "Search Gyms" : {
+    "transaction" : "Search Gyms",
+    "sampleCount" : 2557,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 14791.917481423541,
+    "minResTime" : 131.0,
+    "maxResTime" : 53223.0,
+    "pct1ResTime" : 35292.200000000004,
+    "pct2ResTime" : 39265.7,
+    "pct3ResTime" : 45661.040000000015,
+    "throughput" : 5.907085268094347,
+    "receivedKBytesPerSec" : 16.34255133253055,
+    "sentKBytesPerSec" : 2.140164682092776
+  },
+  "Login" : {
+    "transaction" : "Login",
+    "sampleCount" : 3,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 164.66666666666666,
+    "minResTime" : 135.0,
+    "maxResTime" : 211.0,
+    "pct1ResTime" : 211.0,
+    "pct2ResTime" : 211.0,
+    "pct3ResTime" : 211.0,
+    "throughput" : 4.5662100456621,
+    "receivedKBytesPerSec" : 3.099136700913242,
+    "sentKBytesPerSec" : 1.101419805936073
+  }
+}
