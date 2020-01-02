@@ -1,0 +1,118 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: VerifyAdmin</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.aop</a> ]
+</div>
+
+<h1>Coverage Summary for Class: VerifyAdmin (com.ecnu.aop)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">VerifyAdmin</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.5%
+  </span>
+  <span class="absValue">
+    (7/ 8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.aop;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.enums.ResultEnum;
+<i>4</i>&nbsp;import com.ecnu.exception.MyException;
+<i>5</i>&nbsp;import org.aspectj.lang.annotation.Aspect;
+<i>6</i>&nbsp;import org.aspectj.lang.annotation.Before;
+<i>7</i>&nbsp;import org.aspectj.lang.annotation.Pointcut;
+<i>8</i>&nbsp;import org.springframework.core.annotation.Order;
+<i>9</i>&nbsp;import org.springframework.stereotype.Component;
+<i>10</i>&nbsp;import org.springframework.web.context.request.RequestAttributes;
+<i>11</i>&nbsp;import org.springframework.web.context.request.RequestContextHolder;
+<i>12</i>&nbsp;import org.springframework.web.context.request.ServletRequestAttributes;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;/**
+<i>17</i>&nbsp; * @author onion
+<i>18</i>&nbsp; * @date 2019/12/15 -9:51 下午
+<i>19</i>&nbsp; */
+<i>20</i>&nbsp;@Aspect
+<i>21</i>&nbsp;@Component
+<i>22</i>&nbsp;@Order(2)
+<b class="fc"><i>23</i>&nbsp;public class VerifyAdmin {</b>
+<i>24</i>&nbsp;    @Pointcut(&quot;@annotation(com.ecnu.annotation.AdminOnly)&quot;)
+<b class="nc"><i>25</i>&nbsp;    public void verifyAdminPointcut(){}</b>
+<i>26</i>&nbsp;    @Before(&quot;verifyAdminPointcut()&quot;)
+<i>27</i>&nbsp;    public void verifyAdmin(){
+<b class="fc"><i>28</i>&nbsp;        RequestAttributes attributes = RequestContextHolder.getRequestAttributes();</b>
+<b class="fc"><i>29</i>&nbsp;        ServletRequestAttributes sra = (ServletRequestAttributes) attributes;</b>
+<b class="fc"><i>30</i>&nbsp;        HttpServletRequest request = sra.getRequest();</b>
+<b class="fc"><i>31</i>&nbsp;        if (request.getAttribute(&quot;admin_claims&quot;) == null){</b>
+<b class="fc"><i>32</i>&nbsp;            throw new MyException(ResultEnum.NO_AUTHORITY);</b>
+<i>33</i>&nbsp;        }
+<b class="fc"><i>34</i>&nbsp;    }</b>
+<i>35</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

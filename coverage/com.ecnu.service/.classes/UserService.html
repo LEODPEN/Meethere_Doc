@@ -1,0 +1,101 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: UserService</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.service</a> ]
+</div>
+
+<h1>Coverage Summary for Class: UserService (com.ecnu.service)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">UserService$MockitoMock$1319529997</td>
+  </tr>
+  <tr>
+    <td class="name">UserService$MockitoMock$1319529997$auxiliary$3Ee3npcJ</td>
+  </tr>
+  <tr>
+    <td class="name">UserService$MockitoMock$1319529997$auxiliary$J3ExWkTL</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.service;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.domain.Order;
+<i>4</i>&nbsp;import com.ecnu.domain.User;
+<i>5</i>&nbsp;import com.ecnu.request.UserLoginRequest;
+<i>6</i>&nbsp;import com.ecnu.request.UserRegisterRequest;
+<i>7</i>&nbsp;import com.github.pagehelper.PageInfo;
+<i>8</i>&nbsp;import org.springframework.web.multipart.MultipartFile;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import java.util.Map;
+<i>11</i>&nbsp;import java.util.Set;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;/**
+<i>14</i>&nbsp; * @author onion
+<i>15</i>&nbsp; * @date 2019/12/11 -6:22 下午
+<i>16</i>&nbsp; */
+<i>17</i>&nbsp;public interface UserService {
+<i>18</i>&nbsp;    boolean checkEmail(String email);
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    void register(UserRegisterRequest request);
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;    Map&lt;String, String&gt; login(UserLoginRequest request);
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    void modifyNickname(String id, String nickname);
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    String uploadProfile(String id, MultipartFile file);
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    void modifyPassword(String id, String password, String code);
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    void sendCode(String email);
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    PageInfo&lt;User&gt; findAllUsers(int page, int size);
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    void disableAccount(String userId);
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    void updateCredit(String userId, Integer credit);
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    void enableAccount(String userId);
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    PageInfo&lt;User&gt; findAllDisabledUsers(Integer page, Integer size);
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    Set&lt;Order&gt; findUserOrders(String email);
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;    void logout(String token);
+<i>45</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

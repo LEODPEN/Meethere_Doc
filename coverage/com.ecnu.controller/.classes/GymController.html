@@ -1,0 +1,201 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: GymController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: GymController (com.ecnu.controller)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GymController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/ 15)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">GymController$$EnhancerBySpringCGLIB$$1b3808c7</td>
+  </tr>
+  <tr>
+    <td class="name">GymController$$EnhancerBySpringCGLIB$$1b3808c7$$FastClassBySpringCGLIB$$fec39e0a</td>
+  </tr>
+  <tr>
+    <td class="name">GymController$$FastClassBySpringCGLIB$$3350f801</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/ 15)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.annotation.AdminOnly;
+<i>4</i>&nbsp;import com.ecnu.dao.GymDao;
+<i>5</i>&nbsp;import com.ecnu.domain.Gym;
+<i>6</i>&nbsp;import com.ecnu.request.GymFilterRequest;
+<i>7</i>&nbsp;import com.ecnu.service.GymService;
+<i>8</i>&nbsp;import com.ecnu.vo.ResultVO;
+<i>9</i>&nbsp;import com.github.pagehelper.PageInfo;
+<i>10</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>11</i>&nbsp;import org.springframework.web.bind.annotation.*;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;import java.util.Map;
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;/**
+<i>16</i>&nbsp; * @author onion
+<i>17</i>&nbsp; * @date 2019/12/11 -9:35 上午
+<i>18</i>&nbsp; */
+<i>19</i>&nbsp;@RestController
+<i>20</i>&nbsp;@RequestMapping(&quot;/gym&quot;)
+<b class="fc"><i>21</i>&nbsp;public class GymController {</b>
+<i>22</i>&nbsp;    @Autowired
+<i>23</i>&nbsp;    private GymService gymService;
+<i>24</i>&nbsp;    /*
+<i>25</i>&nbsp;    * 查看所有的场馆
+<i>26</i>&nbsp;    * */
+<i>27</i>&nbsp;    @GetMapping(&quot;/allGyms&quot;)
+<i>28</i>&nbsp;    public ResultVO findAllGyms(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;5&quot;) Integer size){
+<b class="fc"><i>29</i>&nbsp;        PageInfo&lt;Gym&gt; gymPageInfo = gymService.findAllGyms(page, size);</b>
+<b class="fc"><i>30</i>&nbsp;        return ResultVO.succeed(gymPageInfo);</b>
+<i>31</i>&nbsp;    }
+<i>32</i>&nbsp;    /*
+<i>33</i>&nbsp;    * 通过关键字查看，模糊匹配场馆的地址和名字
+<i>34</i>&nbsp;    * */
+<i>35</i>&nbsp;    @GetMapping(&quot;/keyword&quot;)
+<i>36</i>&nbsp;    public ResultVO findGymsByKeyword(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;5&quot;) Integer size, @RequestParam String keyword){
+<b class="fc"><i>37</i>&nbsp;        PageInfo&lt;Gym&gt; gyms = gymService.findGymsByKeyword(page, size, keyword);</b>
+<b class="fc"><i>38</i>&nbsp;        return ResultVO.succeed(gyms);</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    /*
+<i>42</i>&nbsp;    * 通过筛选器查找，封装成GymFilterRequest对象
+<i>43</i>&nbsp;    * String type 可以为空，对应到过滤条件即为默认的不限;
+<i>44</i>&nbsp;    * String address 可以为空，对应到过滤条件即为默认的不限;
+<i>45</i>&nbsp;    * type和address可以写死在前端页面
+<i>46</i>&nbsp;    * Boolean highToLow 租金价格从高到低排序还是从低到高排序，不能为空，一定要有默认值，比如默认从低到高排序;
+<i>47</i>&nbsp;    * Boolean openOnly 意思为查询全部还是查询开放的场馆。（有的场馆可能被关闭了，open值为false）不能为空，一定有默认值，比如默认为查询全部;
+<i>48</i>&nbsp;    * */
+<i>49</i>&nbsp;    @PostMapping(&quot;/filter&quot;)
+<i>50</i>&nbsp;    public ResultVO findGymByFilter(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;5&quot;) Integer size, @RequestBody GymFilterRequest request){
+<b class="fc"><i>51</i>&nbsp;        PageInfo&lt;Gym&gt; gyms = gymService.findGymsByFilter(page, size, request);</b>
+<b class="fc"><i>52</i>&nbsp;        return ResultVO.succeed(gyms);</b>
+<i>53</i>&nbsp;    }
+<i>54</i>&nbsp;    /*
+<i>55</i>&nbsp;    * 查看此场馆的评分和评价，返回一个map，里面有如下信息
+<i>56</i>&nbsp;    * score：评分，double类型，可能需要保留2位
+<i>57</i>&nbsp;    * comment：评价内容，字符串类型
+<i>58</i>&nbsp;    * */
+<i>59</i>&nbsp;    @GetMapping(&quot;/score&quot;)
+<i>60</i>&nbsp;    public ResultVO findScore(@RequestParam String gymId){
+<b class="fc"><i>61</i>&nbsp;        Map&lt;String, Object&gt; map = gymService.findScore(gymId);</b>
+<b class="fc"><i>62</i>&nbsp;        return ResultVO.succeed(map);</b>
+<i>63</i>&nbsp;    }
+<i>64</i>&nbsp;
+<i>65</i>&nbsp;    /*
+<i>66</i>&nbsp;    我没有单独封装为xxxRequest对象，和原类型差不多
+<i>67</i>&nbsp;    private String gymId; //不需要提供，后端自动生成
+<i>68</i>&nbsp;    private String name;
+<i>69</i>&nbsp;    private String description;
+<i>70</i>&nbsp;    private String address;
+<i>71</i>&nbsp;    private Double rent; //租金价格
+<i>72</i>&nbsp;    private Boolean open; //是否开放，可以不提供，默认为true
+<i>73</i>&nbsp;    private String photo; //图片url
+<i>74</i>&nbsp;    private String type; //type类型有规定，最好
+<i>75</i>&nbsp;    * */
+<i>76</i>&nbsp;    @PostMapping(&quot;/addGym&quot;)
+<i>77</i>&nbsp;    @AdminOnly
+<i>78</i>&nbsp;    public ResultVO addGym(@RequestBody Gym gym){
+<b class="fc"><i>79</i>&nbsp;        gym = gymService.addGym(gym);</b>
+<b class="fc"><i>80</i>&nbsp;        return ResultVO.succeed(gym);</b>
+<i>81</i>&nbsp;    }
+<i>82</i>&nbsp;    /*
+<i>83</i>&nbsp;    * 更新场馆信息
+<i>84</i>&nbsp;    * 传入部分字段就可以，其他不需要的字段可以不提供，但一定要传入主键
+<i>85</i>&nbsp;    * */
+<i>86</i>&nbsp;    @PostMapping(&quot;/updateGym&quot;)
+<i>87</i>&nbsp;    @AdminOnly
+<i>88</i>&nbsp;    public ResultVO updateGym(@RequestBody Gym gym){
+<b class="fc"><i>89</i>&nbsp;        gym = gymService.updateGym(gym);</b>
+<b class="fc"><i>90</i>&nbsp;        return ResultVO.succeed(gym);</b>
+<i>91</i>&nbsp;    }
+<i>92</i>&nbsp;    /*
+<i>93</i>&nbsp;    * 逻辑删除，把open置为false
+<i>94</i>&nbsp;    * */
+<i>95</i>&nbsp;    @PostMapping(&quot;/deleteGym&quot;)
+<i>96</i>&nbsp;    @AdminOnly
+<i>97</i>&nbsp;    public ResultVO deleteGym(@RequestParam String gymId){
+<b class="fc"><i>98</i>&nbsp;        gymService.deleteGym(gymId);</b>
+<b class="fc"><i>99</i>&nbsp;        return ResultVO.succeed();</b>
+<i>100</i>&nbsp;    }
+<i>101</i>&nbsp;
+<i>102</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

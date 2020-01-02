@@ -1,0 +1,136 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: VerifyLogin</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.aop</a> ]
+</div>
+
+<h1>Coverage Summary for Class: VerifyLogin (com.ecnu.aop)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">VerifyLogin</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.5%
+  </span>
+  <span class="absValue">
+    (14/ 16)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.aop;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.enums.ResultEnum;
+<i>4</i>&nbsp;import com.ecnu.exception.MyException;
+<i>5</i>&nbsp;import com.ecnu.utils.JwtUtil;
+<i>6</i>&nbsp;import io.jsonwebtoken.Claims;
+<i>7</i>&nbsp;import org.aspectj.lang.annotation.Aspect;
+<i>8</i>&nbsp;import org.aspectj.lang.annotation.Before;
+<i>9</i>&nbsp;import org.aspectj.lang.annotation.Pointcut;
+<i>10</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>11</i>&nbsp;import org.springframework.core.annotation.Order;
+<i>12</i>&nbsp;import org.springframework.data.redis.core.StringRedisTemplate;
+<i>13</i>&nbsp;import org.springframework.stereotype.Component;
+<i>14</i>&nbsp;import org.springframework.util.StringUtils;
+<i>15</i>&nbsp;import org.springframework.web.context.request.RequestAttributes;
+<i>16</i>&nbsp;import org.springframework.web.context.request.RequestContextHolder;
+<i>17</i>&nbsp;import org.springframework.web.context.request.ServletRequestAttributes;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;/**
+<i>22</i>&nbsp; * @author onion
+<i>23</i>&nbsp; * @date 2019/12/15 -9:50 下午
+<i>24</i>&nbsp; */
+<i>25</i>&nbsp;@Aspect
+<i>26</i>&nbsp;@Component
+<i>27</i>&nbsp;@Order(1)
+<b class="fc"><i>28</i>&nbsp;public class VerifyLogin {</b>
+<i>29</i>&nbsp;    @Autowired
+<i>30</i>&nbsp;    private StringRedisTemplate redisTemplate;
+<i>31</i>&nbsp;    @Pointcut(&quot;within(com.ecnu.controller..*) &amp;&amp; !@annotation(com.ecnu.annotation.LoginRequired)&quot;)
+<b class="nc"><i>32</i>&nbsp;    public void verifyLoginPointcut(){}</b>
+<i>33</i>&nbsp;    @Before(&quot;verifyLoginPointcut()&quot;)
+<i>34</i>&nbsp;    public void verifyLogin(){
+<b class="fc"><i>35</i>&nbsp;        RequestAttributes attributes = RequestContextHolder.getRequestAttributes();</b>
+<b class="fc"><i>36</i>&nbsp;        ServletRequestAttributes sra = (ServletRequestAttributes) attributes;</b>
+<b class="fc"><i>37</i>&nbsp;        HttpServletRequest request = sra.getRequest();</b>
+<b class="fc"><i>38</i>&nbsp;        String token = request.getHeader(&quot;user_token&quot;);</b>
+<b class="fc"><i>39</i>&nbsp;        if (StringUtils.isEmpty(token)){</b>
+<b class="fc"><i>40</i>&nbsp;            throw new MyException(ResultEnum.MUST_LOGIN);</b>
+<i>41</i>&nbsp;        }
+<b class="fc"><i>42</i>&nbsp;        if (redisTemplate.opsForValue().get(token) == null) {</b>
+<b class="nc"><i>43</i>&nbsp;            throw new MyException(ResultEnum.LOGOUT);</b>
+<i>44</i>&nbsp;        }
+<b class="fc"><i>45</i>&nbsp;        Claims claims = JwtUtil.parseJwt(token);</b>
+<b class="fc"><i>46</i>&nbsp;        if (&quot;admin&quot;.equals(claims.get(&quot;role&quot;, String.class))){</b>
+<b class="fc"><i>47</i>&nbsp;            request.setAttribute(&quot;admin_claims&quot;, claims);</b>
+<i>48</i>&nbsp;        }
+<b class="fc"><i>49</i>&nbsp;        if (&quot;user&quot;.equals(claims.get(&quot;role&quot;, String.class))){</b>
+<b class="fc"><i>50</i>&nbsp;            request.setAttribute(&quot;user_claims&quot;, claims);</b>
+<i>51</i>&nbsp;        }
+<b class="fc"><i>52</i>&nbsp;    }</b>
+<i>53</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

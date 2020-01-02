@@ -1,0 +1,224 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NewsController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NewsController (com.ecnu.controller)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NewsController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (24/ 24)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">NewsController$$EnhancerBySpringCGLIB$$ae609693</td>
+  </tr>
+  <tr>
+    <td class="name">NewsController$$EnhancerBySpringCGLIB$$ae609693$$FastClassBySpringCGLIB$$6093bee9</td>
+  </tr>
+  <tr>
+    <td class="name">NewsController$$FastClassBySpringCGLIB$$90e753c5</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (24/ 24)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.annotation.AdminOnly;
+<i>4</i>&nbsp;import com.ecnu.domain.News;
+<i>5</i>&nbsp;import com.ecnu.domain.NewsComment;
+<i>6</i>&nbsp;import com.ecnu.request.CommentRequest;
+<i>7</i>&nbsp;import com.ecnu.request.NewsRequest;
+<i>8</i>&nbsp;import com.ecnu.service.NewsService;
+<i>9</i>&nbsp;import com.ecnu.utils.ParamUtil;
+<i>10</i>&nbsp;import com.ecnu.vo.ResultVO;
+<i>11</i>&nbsp;import com.github.pagehelper.PageInfo;
+<i>12</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>13</i>&nbsp;import org.springframework.validation.BindingResult;
+<i>14</i>&nbsp;import org.springframework.validation.annotation.Validated;
+<i>15</i>&nbsp;import org.springframework.web.bind.annotation.*;
+<i>16</i>&nbsp;import org.springframework.web.context.request.RequestContextHolder;
+<i>17</i>&nbsp;import org.springframework.web.context.request.ServletRequestAttributes;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>20</i>&nbsp;import javax.validation.Valid;
+<i>21</i>&nbsp;import java.util.Map;
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;/**
+<i>24</i>&nbsp; * @author onion
+<i>25</i>&nbsp; * @date 2019/12/11 -9:41 上午
+<i>26</i>&nbsp; */
+<i>27</i>&nbsp;@RestController
+<i>28</i>&nbsp;@RequestMapping(&quot;/news&quot;)
+<b class="fc"><i>29</i>&nbsp;public class NewsController {</b>
+<i>30</i>&nbsp;    @Autowired
+<i>31</i>&nbsp;    private NewsService newsService;
+<i>32</i>&nbsp;    /*
+<i>33</i>&nbsp;    * 查看所有的news，不会返回news有关的NewsComment
+<i>34</i>&nbsp;    * */
+<i>35</i>&nbsp;    @GetMapping(&quot;/all&quot;)
+<i>36</i>&nbsp;    public ResultVO findAllNews(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;5&quot;) Integer size){
+<b class="fc"><i>37</i>&nbsp;        PageInfo&lt;News&gt; newsPageInfo = newsService.findAllNews(page, size);</b>
+<b class="fc"><i>38</i>&nbsp;        return ResultVO.succeed(newsPageInfo);</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;    /*
+<i>41</i>&nbsp;    * 查看今天的news，不会返回NewsComment
+<i>42</i>&nbsp;    * */
+<i>43</i>&nbsp;    @GetMapping(&quot;/today&quot;)
+<i>44</i>&nbsp;    public ResultVO findTodayNews(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;5&quot;) Integer size){
+<b class="fc"><i>45</i>&nbsp;        PageInfo&lt;News&gt; newsPageInfo = newsService.findTodayNews(page, size);</b>
+<b class="fc"><i>46</i>&nbsp;        return ResultVO.succeed(newsPageInfo);</b>
+<i>47</i>&nbsp;    }
+<i>48</i>&nbsp;    /*
+<i>49</i>&nbsp;    * 查看某个news，会返回相关的评论
+<i>50</i>&nbsp;    * 进阶：评论的树形结构
+<i>51</i>&nbsp;    * 需要前端根据所需要的数据来确定返回的结构
+<i>52</i>&nbsp;    * 目前这个API只是简单返回News，News里面有Comment的集合
+<i>53</i>&nbsp;    * */
+<i>54</i>&nbsp;    @GetMapping(&quot;/one&quot;)
+<i>55</i>&nbsp;    public ResultVO findOneNews(@RequestParam String newsId){
+<b class="fc"><i>56</i>&nbsp;        Map&lt;String, Object&gt; map = newsService.findOneNews(newsId);</b>
+<b class="fc"><i>57</i>&nbsp;        return ResultVO.succeed(map);</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;    /*
+<i>60</i>&nbsp;     *  添加评论，如下
+<i>61</i>&nbsp;     *  @NotEmpty
+<i>62</i>&nbsp;        private String newsId;
+<i>63</i>&nbsp;        private String parentId;
+<i>64</i>&nbsp;        @NotEmpty
+<i>65</i>&nbsp;        private String content;
+<i>66</i>&nbsp;     *
+<i>67</i>&nbsp;     * 参数校验失败，为什么？
+<i>68</i>&nbsp;     * */
+<i>69</i>&nbsp;    @PostMapping(&quot;/addComment&quot;)
+<i>70</i>&nbsp;    public ResultVO addComment(@RequestBody @Valid CommentRequest commentRequest, BindingResult result){
+<b class="fc"><i>71</i>&nbsp;        ParamUtil.verifyParam(result);</b>
+<b class="fc"><i>72</i>&nbsp;        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</b>
+<b class="fc"><i>73</i>&nbsp;        String token = request.getHeader(&quot;user_token&quot;);</b>
+<b class="fc"><i>74</i>&nbsp;        NewsComment newsComment = newsService.addComment(commentRequest, token);</b>
+<b class="fc"><i>75</i>&nbsp;        return ResultVO.succeed(newsComment);</b>
+<i>76</i>&nbsp;    }
+<i>77</i>&nbsp;    /*
+<i>78</i>&nbsp;    * 没有提供修改评论的接口，类似微信，只能删除和添加
+<i>79</i>&nbsp;    * */
+<i>80</i>&nbsp;    @PostMapping(&quot;/deleteComment&quot;)
+<i>81</i>&nbsp;    public ResultVO deleteComment(@RequestParam String commentId){
+<b class="fc"><i>82</i>&nbsp;        newsService.deleteComment(commentId);</b>
+<b class="fc"><i>83</i>&nbsp;        return ResultVO.succeed();</b>
+<i>84</i>&nbsp;    }
+<i>85</i>&nbsp;    /*
+<i>86</i>&nbsp;    * 还没有提供上传图片的接口。暂且就添加网络图片吧？
+<i>87</i>&nbsp;    * NewsRequest对象
+<i>88</i>&nbsp;    * 添加news的时候不需要提供newId，更新的时候需要
+<i>89</i>&nbsp;    * content可以存html
+<i>90</i>&nbsp;    * private String newsId;
+<i>91</i>&nbsp;      @NotEmpty
+<i>92</i>&nbsp;      private String content;
+<i>93</i>&nbsp;      @NotEmpty
+<i>94</i>&nbsp;      private String title;
+<i>95</i>&nbsp;    * */
+<i>96</i>&nbsp;    @PostMapping(&quot;/addNews&quot;)
+<i>97</i>&nbsp;    @AdminOnly
+<i>98</i>&nbsp;    public ResultVO addNews(@Validated @RequestBody NewsRequest newsRequest, BindingResult result){
+<b class="fc"><i>99</i>&nbsp;        ParamUtil.verifyParam(result);</b>
+<b class="fc"><i>100</i>&nbsp;        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</b>
+<b class="fc"><i>101</i>&nbsp;        String token = request.getHeader(&quot;user_token&quot;);</b>
+<b class="fc"><i>102</i>&nbsp;        News news = newsService.addNews(newsRequest, token);</b>
+<b class="fc"><i>103</i>&nbsp;        return ResultVO.succeed(news);</b>
+<i>104</i>&nbsp;    }
+<i>105</i>&nbsp;    /*
+<i>106</i>&nbsp;    * 见上一条
+<i>107</i>&nbsp;    * */
+<i>108</i>&nbsp;    @PostMapping(&quot;/updateNews&quot;)
+<i>109</i>&nbsp;    @AdminOnly
+<i>110</i>&nbsp;    public ResultVO updateNews(@Validated @RequestBody NewsRequest newsRequest, BindingResult result){
+<b class="fc"><i>111</i>&nbsp;        ParamUtil.verifyParam(result);</b>
+<b class="fc"><i>112</i>&nbsp;        News news = newsService.updateNews(newsRequest);</b>
+<b class="fc"><i>113</i>&nbsp;        return ResultVO.succeed(news);</b>
+<i>114</i>&nbsp;    }
+<i>115</i>&nbsp;    /*
+<i>116</i>&nbsp;    * 慎用！会导致级联删除
+<i>117</i>&nbsp;    * 此接口已经修复
+<i>118</i>&nbsp;    * */
+<i>119</i>&nbsp;    @PostMapping(&quot;/deleteNews&quot;)
+<i>120</i>&nbsp;    @AdminOnly
+<i>121</i>&nbsp;    public ResultVO deleteNews(@RequestParam String newsId){
+<b class="fc"><i>122</i>&nbsp;        newsService.deleteNews(newsId);</b>
+<b class="fc"><i>123</i>&nbsp;        return ResultVO.succeed();</b>
+<i>124</i>&nbsp;    }
+<i>125</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

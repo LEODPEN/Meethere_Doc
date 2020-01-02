@@ -1,0 +1,249 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: UserController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: UserController (com.ecnu.controller)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserController</td>
+<td class="coverageStat">
+  <span class="percent">
+    93.8%
+  </span>
+  <span class="absValue">
+    (15/ 16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94.7%
+  </span>
+  <span class="absValue">
+    (36/ 38)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">UserController$$EnhancerBySpringCGLIB$$163cd27b</td>
+  </tr>
+  <tr>
+    <td class="name">UserController$$EnhancerBySpringCGLIB$$163cd27b$$FastClassBySpringCGLIB$$e680c9ea</td>
+  </tr>
+  <tr>
+    <td class="name">UserController$$FastClassBySpringCGLIB$$a9bfdebd</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    93.8%
+  </span>
+  <span class="absValue">
+    (15/ 16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94.7%
+  </span>
+  <span class="absValue">
+    (36/ 38)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.annotation.AdminOnly;
+<i>4</i>&nbsp;import com.ecnu.annotation.LoginRequired;
+<i>5</i>&nbsp;import com.ecnu.domain.Order;
+<i>6</i>&nbsp;import com.ecnu.domain.User;
+<i>7</i>&nbsp;import com.ecnu.request.UserLoginRequest;
+<i>8</i>&nbsp;import com.ecnu.request.UserRegisterRequest;
+<i>9</i>&nbsp;import com.ecnu.enums.ResultEnum;
+<i>10</i>&nbsp;import com.ecnu.service.UserService;
+<i>11</i>&nbsp;import com.ecnu.utils.JwtUtil;
+<i>12</i>&nbsp;import com.ecnu.utils.ParamUtil;
+<i>13</i>&nbsp;import com.ecnu.vo.ResultVO;
+<i>14</i>&nbsp;import com.github.pagehelper.PageInfo;
+<i>15</i>&nbsp;import io.jsonwebtoken.Claims;
+<i>16</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>17</i>&nbsp;import org.springframework.validation.BindingResult;
+<i>18</i>&nbsp;import org.springframework.validation.annotation.Validated;
+<i>19</i>&nbsp;import org.springframework.web.bind.annotation.*;
+<i>20</i>&nbsp;import org.springframework.web.context.request.RequestContextHolder;
+<i>21</i>&nbsp;import org.springframework.web.context.request.ServletRequestAttributes;
+<i>22</i>&nbsp;import org.springframework.web.multipart.MultipartFile;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>25</i>&nbsp;import javax.validation.Valid;
+<i>26</i>&nbsp;import java.util.Map;
+<i>27</i>&nbsp;import java.util.Objects;
+<i>28</i>&nbsp;import java.util.Set;
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;/**
+<i>31</i>&nbsp; * @author onion
+<i>32</i>&nbsp; * @date 2019/12/10 -11:02 下午
+<i>33</i>&nbsp; * function:
+<i>34</i>&nbsp; * 1. Get：邮箱是否被注册/发送验证码
+<i>35</i>&nbsp; * 2. Post：注册/登陆
+<i>36</i>&nbsp; * 3. Put：修改昵称/头像/密码
+<i>37</i>&nbsp; * 4. Delete：禁用账户
+<i>38</i>&nbsp; * 这个controller的文档参考群里的pdf
+<i>39</i>&nbsp; */
+<i>40</i>&nbsp;@RestController
+<i>41</i>&nbsp;@RequestMapping(&quot;/user&quot;)
+<b class="fc"><i>42</i>&nbsp;public class UserController {</b>
+<i>43</i>&nbsp;    @Autowired
+<i>44</i>&nbsp;    private UserService userService;
+<i>45</i>&nbsp;    private String getEmail() {
+<b class="fc"><i>46</i>&nbsp;        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</b>
+<b class="fc"><i>47</i>&nbsp;        String token = request.getHeader(&quot;user_token&quot;);</b>
+<b class="fc"><i>48</i>&nbsp;        Claims claims = JwtUtil.parseJwt(token);</b>
+<b class="fc"><i>49</i>&nbsp;        return claims.getId();</b>
+<i>50</i>&nbsp;    }
+<i>51</i>&nbsp;    @GetMapping(&quot;/check&quot;)
+<i>52</i>&nbsp;    @LoginRequired(value = false)
+<i>53</i>&nbsp;    public ResultVO checkEmail(@RequestParam String email){
+<b class="fc"><i>54</i>&nbsp;        if (userService.checkEmail(email)){</b>
+<b class="fc"><i>55</i>&nbsp;            return ResultVO.succeed();</b>
+<i>56</i>&nbsp;        }
+<i>57</i>&nbsp;        else{
+<b class="fc"><i>58</i>&nbsp;            return ResultVO.fail(ResultEnum.EMAIL_IN_USE);</b>
+<i>59</i>&nbsp;        }
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;    /*
+<i>62</i>&nbsp;    * 只提供给管理员使用，用户查看自己的订单在OrderController里面有接口。
+<i>63</i>&nbsp;    * 场景：管理员先是查看所有的用户，点击具体用户后可以查看其订单情况。
+<i>64</i>&nbsp;    * */
+<i>65</i>&nbsp;    @AdminOnly
+<i>66</i>&nbsp;    @GetMapping(&quot;/UserOrders&quot;)
+<i>67</i>&nbsp;    public ResultVO findMyOrders(@RequestParam String email){
+<b class="nc"><i>68</i>&nbsp;        Set&lt;Order&gt; orderList = userService.findUserOrders(email);</b>
+<b class="nc"><i>69</i>&nbsp;        return ResultVO.succeed(orderList);</b>
+<i>70</i>&nbsp;    }
+<i>71</i>&nbsp;    @PostMapping(&quot;/register&quot;)
+<i>72</i>&nbsp;    @LoginRequired(value = false)
+<i>73</i>&nbsp;    public ResultVO register(@Validated @RequestBody UserRegisterRequest request, BindingResult result){
+<b class="fc"><i>74</i>&nbsp;        ParamUtil.verifyParam(result);</b>
+<b class="fc"><i>75</i>&nbsp;        userService.register(request);</b>
+<b class="fc"><i>76</i>&nbsp;        return ResultVO.succeed();</b>
+<i>77</i>&nbsp;    }
+<i>78</i>&nbsp;    @PostMapping(&quot;/logout&quot;)
+<i>79</i>&nbsp;    public ResultVO logout() {
+<b class="fc"><i>80</i>&nbsp;        HttpServletRequest request = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();</b>
+<b class="fc"><i>81</i>&nbsp;        String token = request.getHeader(&quot;user_token&quot;);</b>
+<b class="fc"><i>82</i>&nbsp;        userService.logout(token);</b>
+<b class="fc"><i>83</i>&nbsp;        return ResultVO.succeed();</b>
+<i>84</i>&nbsp;    }
+<i>85</i>&nbsp;    @PostMapping(&quot;/login&quot;)
+<i>86</i>&nbsp;    @LoginRequired(value = false)
+<i>87</i>&nbsp;    public ResultVO login(@RequestBody @Valid UserLoginRequest request, BindingResult result){
+<b class="fc"><i>88</i>&nbsp;        ParamUtil.verifyParam(result);</b>
+<b class="fc"><i>89</i>&nbsp;        Map&lt;String, String&gt; map = userService.login(request);</b>
+<b class="fc"><i>90</i>&nbsp;        return ResultVO.succeed(map);</b>
+<i>91</i>&nbsp;    }
+<i>92</i>&nbsp;    @PostMapping(&quot;/modifyNickname&quot;)
+<i>93</i>&nbsp;    public ResultVO modifyNickname(@RequestParam String nickname){
+<b class="fc"><i>94</i>&nbsp;        userService.modifyNickname(getEmail(), nickname);</b>
+<b class="fc"><i>95</i>&nbsp;        return ResultVO.succeed();</b>
+<i>96</i>&nbsp;    }
+<i>97</i>&nbsp;    @PostMapping(&quot;/uploadProfile&quot;)
+<i>98</i>&nbsp;    public ResultVO uploadProfile(@RequestParam MultipartFile file){
+<b class="fc"><i>99</i>&nbsp;        String url = userService.uploadProfile(getEmail(), file);</b>
+<b class="fc"><i>100</i>&nbsp;        return ResultVO.succeed(url);</b>
+<i>101</i>&nbsp;    }
+<i>102</i>&nbsp;    @PostMapping(&quot;/modifyPassword&quot;)
+<i>103</i>&nbsp;    public ResultVO modifyPassword(@RequestParam String password, @RequestParam String code){
+<b class="fc"><i>104</i>&nbsp;        userService.modifyPassword(getEmail(), password, code);</b>
+<b class="fc"><i>105</i>&nbsp;        return ResultVO.succeed();</b>
+<i>106</i>&nbsp;    }
+<i>107</i>&nbsp;    @GetMapping(&quot;/sendCode&quot;)
+<i>108</i>&nbsp;    @LoginRequired(value = false)
+<i>109</i>&nbsp;    public ResultVO sendCode(@RequestParam String email){
+<b class="fc"><i>110</i>&nbsp;        userService.sendCode(email);</b>
+<b class="fc"><i>111</i>&nbsp;        return ResultVO.succeed();</b>
+<i>112</i>&nbsp;    }
+<i>113</i>&nbsp;    @GetMapping(&quot;/findAllUsers&quot;)
+<i>114</i>&nbsp;    @AdminOnly
+<i>115</i>&nbsp;    public ResultVO findAllUsers(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;10&quot;) Integer size){
+<b class="fc"><i>116</i>&nbsp;        PageInfo&lt;User&gt; list = userService.findAllUsers(page, size);</b>
+<b class="fc"><i>117</i>&nbsp;        return ResultVO.succeed(list);</b>
+<i>118</i>&nbsp;    }
+<i>119</i>&nbsp;    //更多个性化搜索
+<i>120</i>&nbsp;    @GetMapping(&quot;/findAllDisabledUsers&quot;)
+<i>121</i>&nbsp;    @AdminOnly
+<i>122</i>&nbsp;    public ResultVO findAllDisabledUsers(@RequestParam(defaultValue = &quot;1&quot;) Integer page, @RequestParam(defaultValue = &quot;10&quot;) Integer size){
+<b class="fc"><i>123</i>&nbsp;        PageInfo&lt;User&gt; list = userService.findAllDisabledUsers(page, size);</b>
+<b class="fc"><i>124</i>&nbsp;        return ResultVO.succeed(list);</b>
+<i>125</i>&nbsp;    }
+<i>126</i>&nbsp;
+<i>127</i>&nbsp;    @PostMapping(&quot;/disableAccount&quot;)
+<i>128</i>&nbsp;    @AdminOnly
+<i>129</i>&nbsp;//    @LoginRequired(value = false)
+<i>130</i>&nbsp;    public ResultVO disableAccount(@RequestParam String userId){
+<b class="fc"><i>131</i>&nbsp;        userService.disableAccount(userId);</b>
+<b class="fc"><i>132</i>&nbsp;        return ResultVO.succeed();</b>
+<i>133</i>&nbsp;    }
+<i>134</i>&nbsp;
+<i>135</i>&nbsp;    @PostMapping(&quot;/enableAccount&quot;)
+<i>136</i>&nbsp;//    @AdminOnly
+<i>137</i>&nbsp;    @LoginRequired(value = false)
+<i>138</i>&nbsp;    public ResultVO enableAccount(@RequestParam String userId){
+<b class="fc"><i>139</i>&nbsp;        userService.enableAccount(userId);</b>
+<b class="fc"><i>140</i>&nbsp;        return ResultVO.succeed();</b>
+<i>141</i>&nbsp;    }
+<i>142</i>&nbsp;
+<i>143</i>&nbsp;    @PostMapping(&quot;/updateCredit&quot;)
+<i>144</i>&nbsp;    @AdminOnly
+<i>145</i>&nbsp;    public ResultVO updateCredit(@RequestParam String userId, @RequestParam Integer credit){
+<b class="fc"><i>146</i>&nbsp;        userService.updateCredit(userId, credit);</b>
+<b class="fc"><i>147</i>&nbsp;        return ResultVO.succeed();</b>
+<i>148</i>&nbsp;    }
+<i>149</i>&nbsp;
+<i>150</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

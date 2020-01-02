@@ -1,0 +1,102 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: OrderService</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.service</a> ]
+</div>
+
+<h1>Coverage Summary for Class: OrderService (com.ecnu.service)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">OrderService$MockitoMock$1490947662</td>
+  </tr>
+  <tr>
+    <td class="name">OrderService$MockitoMock$1490947662$auxiliary$H8mZunOB</td>
+  </tr>
+  <tr>
+    <td class="name">OrderService$MockitoMock$1490947662$auxiliary$Vvj88ufc</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.service;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.domain.Order;
+<i>4</i>&nbsp;import com.ecnu.request.AvailableTimeRequest;
+<i>5</i>&nbsp;import com.ecnu.request.OrderRequest;
+<i>6</i>&nbsp;import org.springframework.data.domain.Page;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import java.util.List;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;/**
+<i>11</i>&nbsp; * @author onion
+<i>12</i>&nbsp; * @date 2019/12/11 -6:24 下午
+<i>13</i>&nbsp; */
+<i>14</i>&nbsp;public interface OrderService {
+<i>15</i>&nbsp;    Page&lt;Order&gt; findOrderByEmail(String email, int page, int size);
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    Page&lt;Order&gt; findMyCurrentOrders(String email, Integer page, Integer size);
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    Page&lt;Order&gt; findMyFutureOrders(String email, Integer page, Integer size);
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    Page&lt;Order&gt; findMyPastOrders(String email, Integer page, Integer size);
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    Page&lt;Order&gt; findMyOrdersByGym(String email, String type, Integer page, Integer size);
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    void addOrder(OrderRequest request, String email);
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    void cancelOrder(String orderId);
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    Page&lt;Order&gt; findAllOrders(Integer page, Integer size);
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    Page&lt;Order&gt; findAllCurrentOrders(Integer page, Integer size);
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;    Page&lt;Order&gt; findAllFutureOrders(Integer page, Integer size);
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    Page&lt;Order&gt; findAllPastOrders(Integer page, Integer size);
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    Page&lt;Order&gt; findAllOrdersByType(String type, Integer page, Integer size);
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    void commentOrder(String orderId, Integer score, String comment);
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    List&lt;Integer[]&gt; findAvailableTime(AvailableTimeRequest request);
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    Page&lt;Order&gt; findMyCanceledOrder(String email, Integer page, Integer size);
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;    Page&lt;Order&gt; findAllCanceledOrders(Integer page, Integer size);
+<i>46</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

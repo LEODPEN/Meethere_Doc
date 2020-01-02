@@ -1,0 +1,115 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: WebSecurityConfig</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.config</a> ]
+</div>
+
+<h1>Coverage Summary for Class: WebSecurityConfig (com.ecnu.config)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WebSecurityConfig</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">WebSecurityConfig$$EnhancerBySpringCGLIB$$1de563e3</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.config;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.springframework.context.annotation.Configuration;
+<i>4</i>&nbsp;import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+<i>5</i>&nbsp;import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+<i>6</i>&nbsp;import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;/**
+<i>9</i>&nbsp; * @author onion
+<i>10</i>&nbsp; * @date 2019/12/10 -11:06 下午
+<i>11</i>&nbsp; */
+<i>12</i>&nbsp;@Configuration
+<i>13</i>&nbsp;@EnableWebSecurity
+<b class="fc"><i>14</i>&nbsp;public class WebSecurityConfig extends WebSecurityConfigurerAdapter {</b>
+<i>15</i>&nbsp;    @Override
+<i>16</i>&nbsp;    protected void configure(HttpSecurity http) throws Exception {
+<b class="fc"><i>17</i>&nbsp;        http.authorizeRequests()</b>
+<b class="fc"><i>18</i>&nbsp;                .antMatchers(&quot;/**&quot;).permitAll()</b>
+<b class="fc"><i>19</i>&nbsp;                .anyRequest().authenticated()</b>
+<b class="fc"><i>20</i>&nbsp;                .and().csrf().disable();</b>
+<b class="fc"><i>21</i>&nbsp;    }</b>
+<i>22</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

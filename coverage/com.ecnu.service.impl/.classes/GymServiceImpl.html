@@ -1,0 +1,199 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: GymServiceImpl</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.service.impl</a> ]
+</div>
+
+<h1>Coverage Summary for Class: GymServiceImpl (com.ecnu.service.impl)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GymServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    98%
+  </span>
+  <span class="absValue">
+    (49/ 50)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.service.impl;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.dao.GymDao;
+<i>4</i>&nbsp;import com.ecnu.dao.GymMapper;
+<i>5</i>&nbsp;import com.ecnu.domain.Gym;
+<i>6</i>&nbsp;import com.ecnu.domain.Order;
+<i>7</i>&nbsp;import com.ecnu.request.GymFilterRequest;
+<i>8</i>&nbsp;import com.ecnu.service.GymService;
+<i>9</i>&nbsp;import com.ecnu.utils.KeyUtil;
+<i>10</i>&nbsp;import com.github.pagehelper.PageHelper;
+<i>11</i>&nbsp;import com.github.pagehelper.PageInfo;
+<i>12</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>13</i>&nbsp;import org.springframework.stereotype.Service;
+<i>14</i>&nbsp;import org.springframework.util.StringUtils;
+<i>15</i>&nbsp;import tk.mybatis.mapper.entity.Example;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;import java.util.*;
+<i>18</i>&nbsp;import java.util.stream.Collectors;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;/**
+<i>21</i>&nbsp; * @author onion
+<i>22</i>&nbsp; * @date 2019/12/11 -9:45 下午
+<i>23</i>&nbsp; */
+<i>24</i>&nbsp;@Service
+<b class="fc"><i>25</i>&nbsp;public class GymServiceImpl implements GymService {</b>
+<i>26</i>&nbsp;    @Autowired
+<i>27</i>&nbsp;    private GymMapper gymMapper;
+<i>28</i>&nbsp;    @Autowired
+<i>29</i>&nbsp;    private GymDao gymDao;
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    @Override
+<i>32</i>&nbsp;    public PageInfo&lt;Gym&gt; findAllGyms(Integer page, Integer size) {
+<b class="fc"><i>33</i>&nbsp;        PageHelper.startPage(page, size);</b>
+<b class="fc"><i>34</i>&nbsp;        List&lt;Gym&gt; gyms = gymMapper.selectAll();</b>
+<b class="fc"><i>35</i>&nbsp;        return new PageInfo&lt;&gt;(gyms);</b>
+<i>36</i>&nbsp;    }
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    @Override
+<i>39</i>&nbsp;    public PageInfo&lt;Gym&gt; findGymsByKeyword(Integer page, Integer size, String keyword) {
+<b class="fc"><i>40</i>&nbsp;        PageHelper.startPage(page, size);</b>
+<b class="fc"><i>41</i>&nbsp;        Example example = new Example(Gym.class);</b>
+<b class="fc"><i>42</i>&nbsp;        Example.Criteria criteria1 = example.createCriteria();</b>
+<b class="fc"><i>43</i>&nbsp;        Example.Criteria criteria2 = example.createCriteria();</b>
+<b class="fc"><i>44</i>&nbsp;        criteria1.andLike(&quot;name&quot;, &quot;%&quot; + keyword + &quot;%&quot;);</b>
+<b class="fc"><i>45</i>&nbsp;        criteria2.andLike(&quot;description&quot;, &quot;%&quot; + keyword + &quot;%&quot;);</b>
+<b class="fc"><i>46</i>&nbsp;        example.or(criteria2);</b>
+<b class="fc"><i>47</i>&nbsp;        return new PageInfo&lt;&gt;(gymMapper.selectByExample(example));</b>
+<i>48</i>&nbsp;    }
+<i>49</i>&nbsp;
+<i>50</i>&nbsp;    //查看mysql的语句
+<i>51</i>&nbsp;    @Override
+<i>52</i>&nbsp;    public PageInfo&lt;Gym&gt; findGymsByFilter(Integer page, Integer size, GymFilterRequest request) {
+<b class="fc"><i>53</i>&nbsp;        PageHelper.startPage(page, size);</b>
+<b class="fc"><i>54</i>&nbsp;        Example example = new Example(Gym.class);</b>
+<b class="fc"><i>55</i>&nbsp;        Example.Criteria criteria = example.createCriteria();</b>
+<b class="fc"><i>56</i>&nbsp;        if (!StringUtils.isEmpty(request.getType())) {</b>
+<b class="fc"><i>57</i>&nbsp;            criteria.andEqualTo(&quot;type&quot;, request.getType());</b>
+<i>58</i>&nbsp;        }
+<b class="fc"><i>59</i>&nbsp;        if (!StringUtils.isEmpty(request.getAddress())){</b>
+<b class="fc"><i>60</i>&nbsp;            criteria.andLike(&quot;address&quot;, request.getAddress() + &quot;%&quot;);</b>
+<i>61</i>&nbsp;        }
+<b class="fc"><i>62</i>&nbsp;        if (request.getOpenOnly()){</b>
+<b class="fc"><i>63</i>&nbsp;            criteria.andEqualTo(&quot;open&quot;, true);</b>
+<i>64</i>&nbsp;        }
+<b class="fc"><i>65</i>&nbsp;        if (request.getHighToLow()){</b>
+<b class="fc"><i>66</i>&nbsp;            example.orderBy(&quot;rent&quot;).desc();</b>
+<i>67</i>&nbsp;        } else{
+<b class="nc"><i>68</i>&nbsp;            example.orderBy(&quot;rent&quot;).asc();</b>
+<i>69</i>&nbsp;        }
+<b class="fc"><i>70</i>&nbsp;        List&lt;Gym&gt; gyms = gymMapper.selectByExample(example);</b>
+<b class="fc"><i>71</i>&nbsp;        return new PageInfo&lt;&gt;(gyms);</b>
+<i>72</i>&nbsp;    }
+<i>73</i>&nbsp;
+<i>74</i>&nbsp;    @Override
+<i>75</i>&nbsp;    public Map&lt;String, Object&gt; findScore(String gymId) {
+<b class="fc"><i>76</i>&nbsp;        Gym gym = gymDao.findById(gymId).get();</b>
+<b class="fc"><i>77</i>&nbsp;        Set&lt;Order&gt; orderSet = gym.getOrderSet();</b>
+<b class="fc"><i>78</i>&nbsp;        Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();</b>
+<b class="fc"><i>79</i>&nbsp;        if (orderSet == null) {</b>
+<b class="fc"><i>80</i>&nbsp;            map.put(&quot;score&quot;, 0);</b>
+<b class="fc"><i>81</i>&nbsp;            map.put(&quot;comment&quot;, &quot;暂无订单和评论&quot;);</b>
+<b class="fc"><i>82</i>&nbsp;            return map;</b>
+<i>83</i>&nbsp;        }
+<i>84</i>&nbsp;
+<b class="fc"><i>85</i>&nbsp;        Optional&lt;Integer&gt; sum = orderSet.stream().map(Order::getScore).reduce(Integer::sum);</b>
+<b class="fc"><i>86</i>&nbsp;        int sumValue = sum.orElse(1);</b>
+<i>87</i>&nbsp;
+<b class="fc"><i>88</i>&nbsp;        List&lt;String&gt; comments = orderSet.stream().map(Order::getComment).collect(Collectors.toList());</b>
+<b class="fc"><i>89</i>&nbsp;        map.put(&quot;score&quot;, sumValue / (double) orderSet.size());</b>
+<b class="fc"><i>90</i>&nbsp;        map.put(&quot;comment&quot;, comments);</b>
+<b class="fc"><i>91</i>&nbsp;        return map;</b>
+<i>92</i>&nbsp;    }
+<i>93</i>&nbsp;
+<i>94</i>&nbsp;    @Override
+<i>95</i>&nbsp;    public Gym addGym(Gym gym) {
+<b class="fc"><i>96</i>&nbsp;        gym.setGymId(KeyUtil.genUniqueKey());</b>
+<b class="fc"><i>97</i>&nbsp;        gym.setOpen(true);</b>
+<b class="fc"><i>98</i>&nbsp;        gymMapper.insert(gym);</b>
+<b class="fc"><i>99</i>&nbsp;        return gym;</b>
+<i>100</i>&nbsp;    }
+<i>101</i>&nbsp;
+<i>102</i>&nbsp;    @Override
+<i>103</i>&nbsp;    public Gym updateGym(Gym gym) {
+<b class="fc"><i>104</i>&nbsp;        gymMapper.updateByPrimaryKeySelective(gym);</b>
+<b class="fc"><i>105</i>&nbsp;        return gymMapper.selectOne(gym);</b>
+<i>106</i>&nbsp;    }
+<i>107</i>&nbsp;
+<i>108</i>&nbsp;    @Override
+<i>109</i>&nbsp;    public void deleteGym(String gymId) {
+<b class="fc"><i>110</i>&nbsp;        Gym gym = new Gym();</b>
+<b class="fc"><i>111</i>&nbsp;        gym.setGymId(gymId);</b>
+<b class="fc"><i>112</i>&nbsp;        gym.setOpen(false);</b>
+<b class="fc"><i>113</i>&nbsp;        gymMapper.updateByPrimaryKeySelective(gym);</b>
+<b class="fc"><i>114</i>&nbsp;    }</b>
+<i>115</i>&nbsp;
+<i>116</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

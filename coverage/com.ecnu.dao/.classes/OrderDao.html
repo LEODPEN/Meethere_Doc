@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: OrderDao</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.dao</a> ]
+</div>
+
+<h1>Coverage Summary for Class: OrderDao (com.ecnu.dao)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">OrderDao$MockitoMock$278347562</td>
+  </tr>
+  <tr>
+    <td class="name">OrderDao$MockitoMock$278347562$auxiliary$1iad58YI</td>
+  </tr>
+  <tr>
+    <td class="name">OrderDao$MockitoMock$278347562$auxiliary$ptIKzhLm</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.dao;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.domain.Order;
+<i>4</i>&nbsp;import org.springframework.data.domain.Page;
+<i>5</i>&nbsp;import org.springframework.data.domain.Pageable;
+<i>6</i>&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+<i>7</i>&nbsp;import org.springframework.data.jpa.repository.Query;
+<i>8</i>&nbsp;import org.springframework.stereotype.Repository;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import java.time.LocalDateTime;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;/**
+<i>13</i>&nbsp; * @author onion
+<i>14</i>&nbsp; * @date 2019/12/19 -2:32 下午
+<i>15</i>&nbsp; */
+<i>16</i>&nbsp;@Repository
+<i>17</i>&nbsp;public interface OrderDao extends JpaRepository&lt;Order, String&gt; {
+<i>18</i>&nbsp;    Page&lt;Order&gt; findAllByUserEmail(String email, Pageable pageable);
+<i>19</i>&nbsp;    Page&lt;Order&gt; findAllByUserEmailAndStartTimeBeforeAndEndTimeAfter(String email, LocalDateTime start, LocalDateTime end, Pageable pageable);
+<i>20</i>&nbsp;    Page&lt;Order&gt; findAllByUserEmailAndStartTimeAfter(String email, LocalDateTime start, Pageable pageable);
+<i>21</i>&nbsp;    Page&lt;Order&gt; findAllByUserEmailAndEndTimeBefore(String email, LocalDateTime end, Pageable pageable);
+<i>22</i>&nbsp;    @Query(nativeQuery = true, value = &quot;select * from orders, gym where user_email = ?1 and type = ?2 and order_gym_id = gym_id&quot;)
+<i>23</i>&nbsp;    Page&lt;Order&gt; findAllByUserEmailAndType(String email, String type, Pageable pageable);
+<i>24</i>&nbsp;    @Query(nativeQuery = true, value = &quot;select * from orders, gym where type = ?1 and order_gym_id = gym_id&quot;)
+<i>25</i>&nbsp;    Page&lt;Order&gt; findAllByType(String type, Pageable pageable);
+<i>26</i>&nbsp;    Page&lt;Order&gt; findAll(Pageable pageable);
+<i>27</i>&nbsp;    Page&lt;Order&gt; findAllByStartTimeBeforeAndEndTimeAfter(LocalDateTime start, LocalDateTime end, Pageable pageable);
+<i>28</i>&nbsp;    Page&lt;Order&gt; findAllByStartTimeAfter(LocalDateTime start, Pageable pageable);
+<i>29</i>&nbsp;    Page&lt;Order&gt; findAllByEndTimeBefore(LocalDateTime end, Pageable pageable);
+<i>30</i>&nbsp;//    @Query(nativeQuery = true, value = &quot;select * from orders where user_email = ?1 and cancel = &quot;)
+<i>31</i>&nbsp;    Page&lt;Order&gt; findByUserEmailAndCancelTrue(String email, Pageable pageable);
+<i>32</i>&nbsp;//    @Query(nativeQuery = true, value = &quot;select * from orders where cancel = true&quot;)
+<i>33</i>&nbsp;    Page&lt;Order&gt; findAllByCancelTrue(Pageable pageable);
+<i>34</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

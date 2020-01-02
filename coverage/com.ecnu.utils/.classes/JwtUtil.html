@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: JwtUtil</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.utils</a> ]
+</div>
+
+<h1>Coverage Summary for Class: JwtUtil (com.ecnu.utils)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">JwtUtil</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.3%
+  </span>
+  <span class="absValue">
+    (12/ 13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.utils;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.ecnu.domain.User;
+<i>4</i>&nbsp;import com.ecnu.enums.ResultEnum;
+<i>5</i>&nbsp;import com.ecnu.exception.MyException;
+<i>6</i>&nbsp;import io.jsonwebtoken.Claims;
+<i>7</i>&nbsp;import io.jsonwebtoken.JwtBuilder;
+<i>8</i>&nbsp;import io.jsonwebtoken.Jwts;
+<i>9</i>&nbsp;import io.jsonwebtoken.SignatureAlgorithm;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;import java.util.Date;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;/**
+<i>14</i>&nbsp; * @author onion
+<i>15</i>&nbsp; * @date 2019/12/11 -9:09 上午
+<i>16</i>&nbsp; */
+<b class="nc"><i>17</i>&nbsp;public class JwtUtil {</b>
+<i>18</i>&nbsp;    private static final String key = &quot;meetHere&quot;;
+<i>19</i>&nbsp;    private static final long ttl = 60 * 60 * 24 * 1000;
+<i>20</i>&nbsp;    public static String createJwt(User user){
+<b class="fc"><i>21</i>&nbsp;        long now = System.currentTimeMillis();</b>
+<b class="fc"><i>22</i>&nbsp;        JwtBuilder builder = Jwts.builder()</b>
+<b class="fc"><i>23</i>&nbsp;                .setId(user.getEmail())</b>
+<b class="fc"><i>24</i>&nbsp;                .setIssuedAt(new Date(now))</b>
+<b class="fc"><i>25</i>&nbsp;                .claim(&quot;role&quot;, user.getAdmin() ? &quot;admin&quot; : &quot;user&quot;)</b>
+<b class="fc"><i>26</i>&nbsp;                .claim(&quot;nickname&quot;,user.getNickname())</b>
+<b class="fc"><i>27</i>&nbsp;                .setExpiration(new Date(now + ttl))</b>
+<b class="fc"><i>28</i>&nbsp;                .signWith(SignatureAlgorithm.HS256, key);</b>
+<b class="fc"><i>29</i>&nbsp;        return builder.compact();</b>
+<i>30</i>&nbsp;    }
+<i>31</i>&nbsp;    public static Claims parseJwt(String jwtStr) throws MyException{
+<i>32</i>&nbsp;        try{
+<b class="fc"><i>33</i>&nbsp;            return Jwts.parser().setSigningKey(key).parseClaimsJws(jwtStr).getBody();</b>
+<b class="fc"><i>34</i>&nbsp;        }catch (Exception e){</b>
+<b class="fc"><i>35</i>&nbsp;            throw new MyException(ResultEnum.INVALID_TOKEN);</b>
+<i>36</i>&nbsp;        }
+<i>37</i>&nbsp;    }
+<i>38</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>

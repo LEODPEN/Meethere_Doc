@@ -23,9 +23,13 @@
 
 + Meethere系统测试用例计划书.xlsx
 
-+ Meethere系统性能测试计划书.doc
++ Meethere性能测试计划.docx
 
 + Meethere系统性能报告.doc
+
++ coverage ( 覆盖度报告 )
+
++ static analyze ( 静态分析报告 )
 
 ## 项目部分成品截图
 
@@ -33,7 +37,7 @@
 
 <div align=center><img width="44%" height="44%" src="极部分截图/2.png"/></div>
 
-<div align=center><img width="44%" height="44%" src="极部分截图/3.jpg"/></div>
+<div align=center><img width="44%" height="44%" src="极部分截图/3.png"/></div>
 
 > 更多展示内容见前端仓库
 

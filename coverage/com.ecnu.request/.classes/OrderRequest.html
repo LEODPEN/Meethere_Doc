@@ -1,0 +1,138 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: OrderRequest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.ecnu.request</a> ]
+</div>
+
+<h1>Coverage Summary for Class: OrderRequest (com.ecnu.request)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">OrderRequest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">OrderRequest$OrderRequestBuilder</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/ 10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/ 10)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.ecnu.request;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import lombok.AllArgsConstructor;
+<i>4</i>&nbsp;import lombok.Builder;
+<i>5</i>&nbsp;import lombok.Data;
+<i>6</i>&nbsp;import lombok.NoArgsConstructor;
+<i>7</i>&nbsp;import org.hibernate.validator.constraints.Range;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import javax.validation.constraints.NotEmpty;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;/**
+<i>12</i>&nbsp; * @author onion
+<i>13</i>&nbsp; * @date 2019/12/11 -11:18 下午
+<i>14</i>&nbsp; */
+<b class="fc"><i>15</i>&nbsp;@Data</b>
+<b class="fc"><i>16</i>&nbsp;@AllArgsConstructor</b>
+<b class="fc"><i>17</i>&nbsp;@NoArgsConstructor</b>
+<b class="fc"><i>18</i>&nbsp;@Builder</b>
+<i>19</i>&nbsp;public class OrderRequest {
+<i>20</i>&nbsp;    @NotEmpty
+<b class="fc"><i>21</i>&nbsp;    private String gymId;</b>
+<b class="fc"><i>22</i>&nbsp;    private String userEmail;</b>
+<i>23</i>&nbsp;    @NotEmpty
+<b class="fc"><i>24</i>&nbsp;    private String date;</b>
+<i>25</i>&nbsp;    @Range(min = 16, max = 39)
+<b class="fc"><i>26</i>&nbsp;    private Integer startTime;</b>
+<i>27</i>&nbsp;    @Range(min = 17, max = 40)
+<b class="fc"><i>28</i>&nbsp;    private Integer endTime;</b>
+<i>29</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-01-02 00:12</div>
+</div>
+</body>
+</html>
