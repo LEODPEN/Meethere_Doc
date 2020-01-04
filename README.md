@@ -42,6 +42,8 @@
 
 + 性能测试脚本与report
 
++ 缺陷：后端仓库的issue中
+
 ## 项目部分成品截图
 
 <div align=center><img width="66%" height="66%" src="极部分截图/1.jpg"/></div>
